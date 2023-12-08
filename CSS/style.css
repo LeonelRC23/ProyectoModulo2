@@ -6,11 +6,43 @@
  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@600&family=Heebo:wght@100;200&family=Nunito:ital,wght@1,200&family=Rubik+Iso&family=Satisfy&display=swap');
 .fondo {
     width: 80%;
-    margin-left: 15%;
+    margin-left: 12%;
 }
-
-.botonInicio {
- 
-    background: rgb(3,14,14);
-    background: linear-gradient(0deg, rgba(3,14,14,1) 0%, rgba(162,66,198,1) 100%);
+.ohno {
+   
+background: linear-gradient(rgba(137,41,177,1),rgba(95,122,255,1));
+-webkit-background-clip: text;
+color: transparent;  
+}
+.botonInicio{
+    background-color: blueviolet;
+}
+.botonDegradado:hover {
+    background: rgb(137,41,177);
+background: radial-gradient(circle, rgba(137,41,177,1) 15%, rgba(95,122,255,1) 100%);
+    
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+    #fondogr {
+        display: none;
+    }
+    #fondoch {
+        width: 60%;
+        margin-left: 20%;
+    }
+   
+}
+@media all and (min-width: 992px){
+    #fondoch {
+        display: none;
+    }
+}
+@media all and (max-width:767px){
+    #fondogr {
+        display: none;
+    }
+    #fondoch {
+        width: 70%;
+        margin-left: 20%;
+    }
 }
