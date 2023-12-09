@@ -19,7 +19,11 @@ footer {
 }
 
 #imgFooter{
-    position: relative;
+    justify-content: start;
     width: 300px;
     height: 200px;
+}
+
+li a{
+    font-weight: 300;
 }
