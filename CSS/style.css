@@ -18,3 +18,16 @@ body {
 .carousel-control-prev {
   width: 40px;
 }
+
+.selecion-artista {
+    cursor: pointer;
+  }
+  
+  .album {
+    border-radius: 40px;
+    padding: 20px;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  
