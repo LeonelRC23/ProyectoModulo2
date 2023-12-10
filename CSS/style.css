@@ -2,10 +2,22 @@
   background-color: #b416c8;
 }
 
+.colorMoradoText {
+  color: #b416c8;
+}
+
 .colorCeleste {
   background-color: #00c0ff;
 }
 
+.colorCelesteText {
+  color: #00c0ff;
+}
+
 .fuentePrincipal {
   font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #312c32;
 }
