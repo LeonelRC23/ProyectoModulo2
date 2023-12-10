@@ -1,8 +1,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@600&family=Heebo:wght@100;200&family=Nunito:ital,wght@1,200&family=Rubik+Iso&family=Satisfy&display=swap");
+.fondopag{
+    background-color: black;
+}
 .fondo {
-  width: 80%;
-  margin-left: 12%;
+  width: 70%;
+  margin-left: 15%;
 }
 .ohno {
   background: linear-gradient(rgba(137, 41, 177, 1), rgba(95, 122, 255, 1));
