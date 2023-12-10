@@ -1,0 +1,20 @@
+body {
+  background: #312c32;
+}
+
+.d-block {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0px 5px 20px rgba(170, 240, 91, 0.1);
+}
+
+.seccion-carousel {
+  height: 300px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 40px;
+}
