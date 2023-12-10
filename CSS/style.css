@@ -6,6 +6,15 @@
   color: #b416c8;
 }
 
+.colorGradiente {
+  background: rgb(0, 192, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 192, 255, 1) 0%,
+    rgba(180, 22, 200, 1) 100%
+  );
+}
+
 .colorCeleste {
   background-color: #00c0ff;
 }
