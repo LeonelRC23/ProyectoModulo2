@@ -12,3 +12,17 @@ h1{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+@media all and (max-width: 767px) {
+    .titulo{
+        flex-direction: column;
+    }
+    
+  }
+  
+  @media all and (min-width: 768px) and (max-width: 991px) {
+    
+  }
+  @media all and (min-width: 992px) {
+    
+  }
