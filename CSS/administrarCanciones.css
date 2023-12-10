@@ -1,0 +1,14 @@
+body{
+    background: #312c32;
+}
+
+th, td{
+    text-align: center;
+}
+main{
+    box-shadow: 0px 5px 20px rgba(128, 128, 128, 0.5);
+}
+h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
