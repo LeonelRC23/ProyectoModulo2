@@ -68,3 +68,24 @@ body {
     color: rgb(0, 0, 0);
   }
   
+  .bi {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .btn-play i {
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  .btn-selecion i {
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  .pistaMusica {
+    padding: 5px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("https://img.freepik.com/vector-gratis/onda-sonido-audio-3d-oscilacion-pulso-musica-colorida-patron-impulso-brillante_1217-3981.jpg?w=360");
+    background-position-y: 25%;
+  }
