@@ -4,6 +4,9 @@
   background: #ffffff;
   box-shadow: 0 0 2px 0 rgb(189, 127, 143);
   border-radius: 20px;
+  box-sizing:content-box;
+  width: 40%;
+  margin-top:5rem;
 }
 
 
@@ -324,6 +327,11 @@ body {
   .row p{
     font-size: 16px;
   }
+
+  .contenedorForm{
+    width: 80%;
+    margin-top: 2rem;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -338,6 +346,11 @@ body {
   }
   .row p{
     font-size: 20px;
+  }
+
+  .contenedorForm{
+    width: 65%;
+    margin-top: 2rem;
   }
 }
 @media all and (min-width: 992px) {

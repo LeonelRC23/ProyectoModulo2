@@ -14,81 +14,89 @@
   </head>
   <body>
     <main>
-      <section class="container contenedorForm my-4 py-3">
+      <section class="container contenedorForm py-3">
+        <h3 class="text-center mb-3">
+          <b>Regístrate para empezar <br />a escuchar contenido</b>
+        </h3>
         <form class="row d-flex justify-content-center">
-          <div class="col-md-8 col-xl-6 col-sm-12 pb-3">
-            <label for="nombre" class="form-label">Tu Nombre</label>
-            <input
-              type="text"
-              class="form-control mb-2"
-              id="nombre"
-              placeholder="Tu Nombre"
-              minlength="3"
-              maxlength="25"
-              required
-            />
-          <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
-            <label for="nombredeUsuario" class="form-label"
-              >Nombre de Usuario</label
-            >
-            <div class="input-group has-validation">
-              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+          <fieldset>
+            <div class="col-md-8 col-xl-6 col-sm-12 pb-3">
+              <label for="nombre" class="form-label">Tu Nombre</label>
               <input
                 type="text"
-                class="form-control"
-                id="nombredeUsuario"
-                aria-describedby="inputGroupPrepend3 nombredeUsuarioFeedback"
-                placeholder="yourUsername"
-                minlength="6"
-                maxlength="20"
+                class="form-control mb-2"
+                id="nombre"
+                placeholder="Tu Nombre"
+                minlength="3"
+                maxlength="25"
                 required
               />
             </div>
-          </div>
-          <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
-            <label for="Email" class="form-label">Correo Electrónico</label>
-            <input
-              type="email"
-              class="form-control"
-              id="Email"
-              placeholder="ejemplo@mail.com"
-              minlength="16"
-              maxlength="50"
-              required
-            />
-          </div>
-          <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
-            <label for="Contraseña" class="form-label">Contraseña</label>
-            <input
-              type="password"
-              class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
-              id="Contraseña"
-              minlength="8"
-              maxlength="16"
-              required
-            />
-          </div>
-          <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
-            <label for="confirmarContraseña" class="form-label">Confirmar Contraseña</label>
-            <input
-              type="password"
-              class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
-              id="Contraseña"
-              minlength="8"
-              maxlength="16"
-              required
-            />
-          </div>
-          <div class=" d-grid">
-            <button class="btn btn-success" type="submit">
-                Crear Cuenta
-            </button>
-          </div>
-          <div class="d-flex flex-row justify-content-center">
-            <p class="pe-3 pt-3" id="textoRegistro">¿Ya tienes una cuenta?</p>
-            <a href="./login.html" class="text-decoration-none pt-3 ps-3">Inicia Sesión</a>
-          </div>
+            <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
+              <label for="nombredeUsuario" class="form-label"
+                >Nombre de Usuario</label
+              >
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombredeUsuario"
+                  aria-describedby="inputGroupPrepend3 nombredeUsuarioFeedback"
+                  placeholder="yourUsername"
+                  minlength="6"
+                  maxlength="20"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
+              <label for="Email" class="form-label">Correo Electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="Email"
+                placeholder="ejemplo@mail.com"
+                minlength="16"
+                maxlength="50"
+                required
+              />
+            </div>
+            <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
+              <label for="Contraseña" class="form-label">Contraseña</label>
+              <input
+                type="password"
+                class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
+                id="Contraseña"
+                minlength="8"
+                maxlength="16"
+                required
+              />
+            </div>
+            <div class="col-md-8 col-xl-12 col-sm-12 pb-3">
+              <label for="confirmarContraseña" class="form-label"
+                >Confirmar Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
+                id="Contraseña"
+                minlength="8"
+                maxlength="16"
+                required
+              />
+            </div>
+          </fieldset>
         </form>
+        <div class="d-grid">
+          <button class="btn btn-success" type="submit">Crear Cuenta</button>
+        </div>
+        <div class="d-flex flex-row justify-content-center">
+          <p class="pe-3 pt-3" id="textoRegistro">¿Ya tienes una cuenta?</p>
+          <a href="./login.html" class="text-decoration-none pt-3 ps-3"
+            >Inicia Sesión</a
+          >
+        </div>
       </section>
     </main>
     <script
