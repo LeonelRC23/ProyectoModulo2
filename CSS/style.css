@@ -1,13 +1,14 @@
 
 .contenedorForm{
-  background: #2503032a;
-  box-shadow: 0 0 2px 0 rgb(49, 49, 49);
+  background: #ffffff;
+  box-shadow: 0 0 2px 0 rgb(189, 127, 143);
   border-radius: 20px;
 }
 
 
-p {
+#textoRegistro {
     font-family: "Roboto", sans-serif;
+    font-size: 17px;
 }
 
 a{
