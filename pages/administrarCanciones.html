@@ -13,16 +13,17 @@
     <title>Lista de canciones</title>
   </head>
   <body>
-    <main class="container my-4">
-      <div class="d-flex align-items-center justify-content-between titulo">
-        <h1 class="text-white">Lista de Canciones</h1>
+    <h1 class="text-white text-center mt-3">Lista de Canciónes</h1>
+    <main class="container my-5">
+      
+      <div class="d-flex align-items-center justify-content-end titulo mt-2">
         <button
-          class="btn btn-success mt-5"
+          class="btn btn-success mt-3"
           data-bs-toggle="modal"
           data-bs-target="#modalContacto"
           id="btnNuevoContacto"
         >
-          Nueva Cancion
+          Nueva Canción
         </button>
       </div>
       <section class="table-responsive mt-4">
@@ -30,9 +31,9 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Cancion</th>
+              <th scope="col">Canción</th>
               <th scope="col">Artista</th>
-              <th scope="col">Album</th>
+              <th scope="col">Álbum</th>
               <th scope="col">Año</th>
               <th scope="col">Acciones</th>
             </tr>
@@ -42,10 +43,10 @@
               <th scope="row">1</th>
               <td>Musica ligera</td>
               <td>Soda stereo</td>
-              <td>Cancion animal</td>
+              <td>Canción animal</td>
               <td>1990</td>
               <td>
-                <a class="btn btn-info my-1" href="./pages/detalleContacto.html">Ver mas</a>
+                <a class="btn btn-info my-1" href="">Ver mas</a>
                 <button class="btn btn-warning">Editar</button>
                 <button class="btn btn-danger my-1">Borrar</button>
               </td>
@@ -55,10 +56,10 @@
               <th scope="row">2</th>
               <td>Musica ligera</td>
               <td>Soda stereo</td>
-              <td>Cancion animal</td>
+              <td>Canción animal</td>
               <td>1990</td>
               <td>
-                <a class="btn btn-info my-1" href="./pages/detalleContacto.html">Ver mas</a>
+                <a class="btn btn-info my-1" href="">Ver mas</a>
                 <button class="btn btn-warning">Editar</button>
                 <button class="btn btn-danger my-1">Borrar</button>
               </td>
@@ -67,10 +68,34 @@
               <th scope="row">3</th>
               <td>Musica ligera</td>
               <td>Soda stereo</td>
-              <td>Cancion animal</td>
+              <td>Canción animal</td>
               <td>1990</td>
               <td>
-                <a class="btn btn-info my-1" href="./pages/detalleContacto.html">Ver mas</a>
+                <a class="btn btn-info my-1" href="">Ver mas</a>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger my-1">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>Musica ligera</td>
+              <td>Soda stereo</td>
+              <td>Canción animal</td>
+              <td>1990</td>
+              <td>
+                <a class="btn btn-info my-1" href="">Ver mas</a>
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger my-1">Borrar</button>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>Musica ligera</td>
+              <td>Soda stereo</td>
+              <td>Canción animal</td>
+              <td>1990</td>
+              <td>
+                <a class="btn btn-info my-1" href="">Ver mas</a>
                 <button class="btn btn-warning">Editar</button>
                 <button class="btn btn-danger my-1">Borrar</button>
               </td>
@@ -81,70 +106,72 @@
     </main>
 
     <div
-    class="modal"
-    id="modalContacto"
-    tabindex="-1"
-    aria-labelledby="modalContactoLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content text-bg-dark">
-        <div class="modal-header">
-          <h5 class="modal-title">Agregar cancion</h5>
-          <button
-            type="button"
-            class="btn-close bg-light"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="cancion class="form-label">Cancion</label>
-              <input
-                type="text"
-                id="cancion"
-                class="form-control"
-                placeholder="Muchacha ojo de papel"
-              />
-              <div class="invalid-feedback">
-                Ingresaste una cantidad de caracteres erroneos para la cancion
+      class="modal"
+      id="modalContacto"
+      tabindex="-1"
+      aria-labelledby="modalContactoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content text-bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title">Agregar canción</h5>
+            <button
+              type="button"
+              class="btn-close bg-light"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="cancion" class="form-label">Canción</label>
+                <input
+                  type="text"
+                  id="cancion"
+                  class="form-control"
+                  placeholder="Musica ligera"
+                />
+                <div class="invalid-feedback">
+                  Ingresaste una cantidad de caracteres erroneos para la cancion
+                </div>
               </div>
-            </div>
-            <div class="mb-3">
-              <label for="artista" class="form-label">Artista</label>
-              <input
-                type="text"
-                id="artista"
-                class="form-control"
-                placeholder="Ej: Almendra"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="album" class="form-label">Album</label>
-              <input
-                type="text"
-                id="album"
-                class="form-control"
-                placeholder="Ej: Almendra"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="año" class="form-label">Año</label>
-              <input
-                type="number"
-                id="añio"
-                class="form-control"
-                placeholder="Ej: 1999"
-              />
-            </div>
-            <button class="btn btn-warning w-100 mt-4" type="submit">Agregar cancion</button>
-          </form>
+              <div class="mb-3">
+                <label for="artista" class="form-label">Artista</label>
+                <input
+                  type="text"
+                  id="artista"
+                  class="form-control"
+                  placeholder="Ej: Soda Stereo"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="album" class="form-label">Álbum</label>
+                <input
+                  type="text"
+                  id="album"
+                  class="form-control"
+                  placeholder="Ej: Cancion Animal"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="año" class="form-label">Año</label>
+                <input
+                  type="number"
+                  id="añio"
+                  class="form-control"
+                  placeholder="Ej: 1990"
+                />
+              </div>
+              <button class="btn btn-warning w-100 mt-4" type="submit">
+                Agregar canción
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
