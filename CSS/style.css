@@ -365,6 +365,9 @@ footer {
 li a {
   font-weight: 300;
 }
+.listaFooter{
+  padding: 0;
+}
 
 
 @media (min-width:577px) and (max-width: 768px) {
@@ -413,4 +416,8 @@ li a {
     ul,ol{
         padding-left: 0rem;
     }
+}
+
+header, footer{
+  background: black
 }
