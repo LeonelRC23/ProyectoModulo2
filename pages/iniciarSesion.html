@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modal de inicio de sesión" />
+    <meta name="keywords" content="inicio de sesión" />
+    <meta name="author" content="SoundG3" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Inicio de sesión</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="fondo">
+      <button
+        type="button"
+        class="btn btn-primary btn-lg"
+        data-bs-toggle="modal"
+        data-bs-target="#isModal"
+      >
+        INICIAR SESIÓN
+      </button>
+    </main>
+    <div
+      class="modal fade"
+      id="isModal"
+      tabindex="-1"
+      aria-labelledby="isModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content container fondo">
+          <div class="d-flex justify-content-end p-2">
+            <button
+              type="button"
+              id="color"
+              class="btn-close p-2"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="row fondo">
+            <div
+              class="col-md-12 col-lg-6 text-center d-flex justify-content-center"
+            >
+              <img
+                class="img-fluid mb-lg-5"
+                id="img"
+                src="../img/g3Sound.gif"
+                alt="img del logo "
+              />
+            </div>
+            <div class="col-md-12 col-lg-6">
+              <div class="modal-header">
+                <h2 class="modal-title fs-2 text-white inicio">
+                  Iniciar sesión
+                </h2>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3 text-white">
+                    <label for="email" class="form-label" id="letras">
+                      Correo electrónico:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control bg-white"
+                      id="email"
+                      placeholder="sound3g@example.com"
+                      minlength="10"
+                      maxlength="300"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="contraseña"
+                      class="form-label text-white"
+                      id="letras"
+                    >
+                      Contraseña:</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control bg-md-white"
+                      id="contraseña"
+                      minlength="8"
+                      maxlength="30"
+                      required
+                      placeholder="Ingrese su clave"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="Recordatorio"
+                      />
+                      <label
+                        class="form-check-label text-white"
+                        for="Recordatorio"
+                        id="letras"
+                        >Recuérdame</label
+                      >
+                    </div>
+                    <a
+                      class="link-underline link-underline-opacity-0 item"
+                      href="#"
+                      id="letras"
+                      >Olvidé mi clave</a
+                    >
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn w-100 my-4 fs-5 py-2 text-white botonInicio botonInicioDegrade"
+                  >
+                    Ingresar
+                  </button>
+                  <article>
+                    <h2 class="modal-title fs-5 text-center text-white">
+                      O iniciar sesión con Google
+                    </h2>
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-lg w-100 mt-3"
+                    >
+                      Inicie sesión con Google
+                    </button>
+                  </article>
+                  <div class="mb-3 mt-3">
+                    <h2 class="fs-5 text-center text-white">
+                      ¿No tiene cuenta aún?
+                      <a
+                        class="link-underline link-underline-opacity-0"
+                        href="#"
+                      >
+                        Registrarme</a
+                      >
+                    </h2>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
