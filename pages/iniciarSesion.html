@@ -16,16 +16,89 @@
     <title>Inicio de sesión</title>
   </head>
   <body>
-    <header></header>
-    <main id="fondo">
-      <button
-        type="button"
-        class="btn btn-primary btn-lg"
-        data-bs-toggle="modal"
-        data-bs-target="#isModal"
+    <header class="fixed-top mb-5">
+      <nav
+        class="efectoBlur navbar navbar-expand-md bg-body-tertiary navbar bg-dark border-bottom border-body py-3"
+        data-bs-theme="dark"
       >
-        INICIAR SESIÓN
-      </button>
+        <div class="container">
+          <a class="navbar-brand m-lg-0" href="#">
+            <img src="" alt="g3SoundGIF" id="imglogo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="elementosNavbar">
+              <ul class="navbar-nav me-auto mx-lg-5" id="listaNavbar">
+                <div class="d-flex mb-md-3" id="elementosNav">
+                  <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
+                    <a class="nav-link active" aria-current="page" href="#">
+                      <i class="fa-solid fa-house"></i>
+                      Inicio
+                    </a>
+                  </li>
+                  <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
+                    <a class="nav-link" href="#">
+                      <i class="fa-solid fa-globe"></i>
+                      Libreria</a
+                    >
+                  </li>
+                  <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
+                    <a class="nav-link" href="#">
+                      <i class="fa-solid fa-bookmark"></i>
+                      Lista de reproduccion
+                    </a>
+                  </li>
+                </div>
+                <form
+                  class="d-flex justify-content-center align-items-center p-lg-0 px-xl-2"
+                  role="search"
+                >
+                  <input
+                    id="inputBuscar"
+                    class="form-control me-2 p-lg-2 mx-xl-2"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Buscar"
+                  />
+                  <a href="#" type="submit" id="buscarNavbar" class="mx-2">
+                    <i
+                      class="fa-solid fa-magnifying-glass"
+                      style="color: #ffffff"
+                    ></i>
+                  </a>
+                </form>
+              </ul>
+            </div>
+            <div class="d-flex flex-column">
+              <button
+                type="button"
+                class="btn btn-lg btn-success my-3 fs-5 botonesUsuario"
+                data-bs-toggle="modal"
+                data-bs-target="#isModal"
+              >
+                Iniciar sesión
+              </button>
+              <button class="btn btn-success fs-5 botonesUsuario" type="submit">
+                Registrate
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="fondo">
+     
+
     </main>
     <div
       class="modal fade"
@@ -39,8 +112,7 @@
           <div class="d-flex justify-content-end p-2">
             <button
               type="button"
-              id="color"
-              class="btn-close p-2"
+              class="btn-close p-2 botonInicio"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
