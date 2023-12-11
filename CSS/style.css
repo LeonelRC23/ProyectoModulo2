@@ -116,6 +116,10 @@ body {
   color: #00c0ff;
 }
 
+.row p{
+  font-size: 25px;
+}
+
 @media all and (max-width: 767px) {
   .btn-selecion i {
     font-size: 20px;
@@ -149,6 +153,9 @@ body {
   .carousel-control-prev {
     width: 20px;
   }
+  .row p{
+    font-size: 16px;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -160,6 +167,9 @@ body {
   }
   .seccion-carousel {
     height: 200px;
+  }
+  .row p{
+    font-size: 20px;
   }
 }
 @media all and (min-width: 992px) {
