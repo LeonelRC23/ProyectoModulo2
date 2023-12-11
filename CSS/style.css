@@ -1,29 +1,27 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@600&family=Heebo:wght@100;200&family=Nunito:ital,wght@1,200&family=Rubik+Iso&family=Satisfy&display=swap");
 .fondopag{
-    background-color: black;
+  background-color: #000000;
 }
 .fondo {
   width: 70%;
   margin-left: 15%;
 }
 .ohno {
-  background: linear-gradient(rgba(137, 41, 177, 1), rgba(95, 122, 255, 1));
+ 
+  background: linear-gradient( rgba(180,22,200,1), rgba(0,192,255,1) );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 .botonInicio {
-  background-color: blueviolet;
+  background-color: #B416C8;
 }
 .botonDegradado:hover {
-  background: rgb(137, 41, 177);
-  background: radial-gradient(
-    circle,
-    rgba(137, 41, 177, 1) 15%,
-    rgba(95, 122, 255, 1) 100%
-  );
-}
+  background: rgb(180,22,200);
+  background: radial-gradient(circle, rgba(180,22,200,1) 10%, rgba(0,192,255,1) 100%);
+  }
+
 
 @media all and (min-width: 768px) and (max-width: 991px) {
   #fondogr {
