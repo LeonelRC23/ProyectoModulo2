@@ -24,6 +24,7 @@
     rgba(95, 122, 255, 1) 100%
   );
 }
+
 @media all and (min-width: 768px) and (max-width: 991px) {
   #fondogr {
     display: none;
@@ -32,6 +33,7 @@
     width: 60%;
     margin-left: 20%;
   }
+ 
 }
 @media all and (min-width: 992px) {
   #fondoch {
@@ -46,4 +48,7 @@
     width: 70%;
     margin-left: 20%;
   }
-}
+  
+   
+  } 
+
