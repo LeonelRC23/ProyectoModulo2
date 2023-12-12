@@ -1,96 +1,92 @@
-
-body{
-    background-color: #312c32;
+body {
+  background-color: #312c32;
 }
 
-html{
-    font-family: 'Roboto', sans-serif;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-.container img{
-    width: 5rem;
-    height: 5rem;
+.container img {
+  width: 5rem;
+  height: 5rem;
 }
 
-#listaNavbar a{
-    padding: 0;
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
+#listaNavbar a {
+  padding: 0;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
 }
 
-#elementosNavbar a:hover{
-    color: #bf56ca;
+#elementosNavbar a:hover {
+  color: #bf56ca;
 }
 
-#imgLogo{
-    max-height: 2rem;
-    width: 2rem;
+#imgLogo {
+  max-height: 2rem;
+  width: 2rem;
 }
 
 #elementosNavbar {
-    display: flex; 
+  display: flex;
 }
 
 #inputBuscar {
-    width: 13rem;
-    height: 2.5rem;
+  width: 13rem;
+  height: 2.5rem;
 }
 
-#buscarNavbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    text-decoration: none;
+#buscarNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
-.efectoBlur{
-    background: #fafafa10 !important;
-    backdrop-filter: blur(0.4rem) ; 
+.efectoBlur {
+  background: #fafafa10 !important;
+  backdrop-filter: blur(0.4rem);
 }
-.seccion-carousel{
-  
-    background: rgb(0, 192, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(0, 192, 255, 1) 0%,
-      rgba(180, 22, 200, 1) 100%
-    );
+.seccion-carousel {
+  background: rgb(0, 192, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 192, 255, 1) 0%,
+    rgba(180, 22, 200, 1) 100%
+  );
 }
-@media (min-width: 1200px) and (max-width: 1400px){
-    #listaNavbar a {
-        padding: 0;
-        font-size: 1.1rem;
-    }
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #listaNavbar a {
+    padding: 0;
+    font-size: 1.1rem;
+  }
 
-    .container img{
-        width: 6.5rem;
-        height: 6.2rem;
-    }
+  .container img {
+    width: 6.5rem;
+    height: 6.2rem;
+  }
 
-    #inputBuscar {
-        width: 12rem;
-        height: 2.2rem;
-    }
+  #inputBuscar {
+    width: 12rem;
+    height: 2.2rem;
+  }
 
-    .botonesUsuario {
-        width: 10rem;
-        height: 2.8rem;
-    }
+  .botonesUsuario {
+    width: 10rem;
+    height: 2.8rem;
+  }
 }
 
 body {
-  background: #312c32;
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 1px;
 }
 
-main{
+main {
   position: relative;
   top: 155px;
-
   flex-grow: 1;
 }
 
@@ -105,7 +101,6 @@ main{
 .seccion-carousel {
   height: auto;
   padding: 20px 0;
-  
 }
 
 .carousel-control-next,
@@ -210,87 +205,76 @@ main{
   color: #00c0ff;
 }
 
-.row p{
+.row p {
   font-size: 25px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  #elementosNavbar a {
+    padding: 0;
+    font-size: 1rem;
+  }
 
-@media (min-width: 992px) and (max-width: 1199px){
+  #navbarSupportedContent {
+    justify-content: center;
+  }
 
-    /* #elementosNavbar{
-        display: flex;
-        flex-direction: column;
-    } */
+  #inputBuscar {
+    width: 12rem;
+    height: 2.5rem;
+  }
 
-    #elementosNavbar a {
-        padding: 0;
-        font-size: 1rem;
-    }
+  .container img {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
 
-    #navbarSupportedContent{
-        justify-content: center;
-    }
+  nav li {
+    height: 2rem;
+  }
 
-    #inputBuscar {
-        width: 12rem;
-        height: 2.5rem;
-    }
-
-    .container img{
-        width: 6.5rem;
-        height: 6.5rem;
-    }
-
-    nav li{
-       height: 2rem;
-    }
-
-    #listaNavbar {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* #elementosNav {
-        height: 2rem;
-    } */
+  #listaNavbar {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991px){
-    #elementosNavbar{
-        display: flex;
-        flex-direction: column;
-    }
+@media (min-width: 768px) and (max-width: 991px) {
+  #elementosNavbar {
+    display: flex;
+    flex-direction: column;
+  }
 
-    #listaNavbar {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  #listaNavbar {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    #listaNavbar a {
-        padding: 0;
-        font-size: 1rem;
-    }
+  #listaNavbar a {
+    padding: 0;
+    font-size: 1rem;
+  }
 
-    #navbarSupportedContent{
-        justify-content: space-between;
-    }
+  #navbarSupportedContent {
+    justify-content: space-between;
+  }
 }
 
-@media (min-width: 0px) and (max-width: 767px){
+@media (min-width: 0px) and (max-width: 767px) {
+  li,
+  form {
+    margin: 0.5rem;
+  }
 
-    li, form {
-        margin: 0.5rem;
-    }
-
-    #elementosNav{
-        flex-direction: column;
-    }
+  #elementosNav {
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -323,10 +307,10 @@ main{
   .carousel-control-prev {
     width: 20px;
   }
-  .row p{
+  .row p {
     font-size: 16px;
   }
-  main{
+  main {
     top: 123px;
   }
 }
@@ -338,10 +322,10 @@ main{
     margin: 10px;
     border-radius: 50%;
   }
-  .row p{
+  .row p {
     font-size: 20px;
   }
-  main{
+  main {
     top: 153px;
   }
 }
@@ -350,41 +334,40 @@ main{
     height: 180px;
     width: 180px;
   }
-  main{
+  main {
     top: 153px;
   }
-  .text-start{
+  .text-start {
     margin: 15px;
   }
 }
 
-
-html{
-  font-family: 'Roboto', sans-serif;
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-.container img{
+.container img {
   width: 5rem;
   height: 5rem;
 }
 
-#listaNavbar a{
+#listaNavbar a {
   padding: 0;
   font-size: 1.5rem;
   color: rgb(255, 255, 255);
 }
 
-#elementosNavbar a:hover{
+#elementosNavbar a:hover {
   color: #bf56ca;
 }
 
-#imgLogo{
+#imgLogo {
   max-height: 2rem;
   width: 2rem;
 }
 
 #elementosNavbar {
-  display: flex; 
+  display: flex;
 }
 
 #inputBuscar {
@@ -392,7 +375,7 @@ html{
   height: 2.5rem;
 }
 
-#buscarNavbar{
+#buscarNavbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,105 +383,100 @@ html{
   text-decoration: none;
 }
 
-.efectoBlur{
+.efectoBlur {
   background: #fafafa10 !important;
-  backdrop-filter: blur(0.4rem) ; 
+  backdrop-filter: blur(0.4rem);
 }
 
-@media (min-width: 1200px) and (max-width: 1400px){
+@media (min-width: 1200px) and (max-width: 1400px) {
   #listaNavbar a {
-      padding: 0;
-      font-size: 1.1rem;
+    padding: 0;
+    font-size: 1.1rem;
   }
 
-  .container img{
-      width: 6.5rem;
-      height: 6.2rem;
+  .container img {
+    width: 6.5rem;
+    height: 6.2rem;
   }
 
   #inputBuscar {
-      width: 12rem;
-      height: 2.2rem;
+    width: 12rem;
+    height: 2.2rem;
   }
 
   .botonesUsuario {
-      width: 10rem;
-      height: 2.8rem;
+    width: 10rem;
+    height: 2.8rem;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px){
-
-
+@media (min-width: 992px) and (max-width: 1199px) {
   #elementosNavbar a {
-      padding: 0;
-      font-size: 1rem;
+    padding: 0;
+    font-size: 1rem;
   }
 
-  #navbarSupportedContent{
-      justify-content: center;
+  #navbarSupportedContent {
+    justify-content: center;
   }
 
   #inputBuscar {
-      width: 12rem;
-      height: 2.5rem;
+    width: 12rem;
+    height: 2.5rem;
   }
 
-  .container img{
-      width: 6.5rem;
-      height: 6.5rem;
+  .container img {
+    width: 6.5rem;
+    height: 6.5rem;
   }
 
-  nav li{
-     height: 2rem;
+  nav li {
+    height: 2rem;
   }
 
   #listaNavbar {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-
 }
 
-@media (min-width: 768px) and (max-width: 991px){
-  #elementosNavbar{
-      display: flex;
-      flex-direction: column;
+@media (min-width: 768px) and (max-width: 991px) {
+  #elementosNavbar {
+    display: flex;
+    flex-direction: column;
   }
 
   #listaNavbar {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #listaNavbar a {
-      padding: 0;
-      font-size: 1rem;
+    padding: 0;
+    font-size: 1rem;
   }
 
-  #navbarSupportedContent{
-      justify-content: space-between;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 767px){
-
-  li, form {
-      margin: 0.5rem;
-  }
-
-  #elementosNav{
-      flex-direction: column;
+  #navbarSupportedContent {
+    justify-content: space-between;
   }
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  li,
+  form {
+    margin: 0.5rem;
+  }
 
+  #elementosNav {
+    flex-direction: column;
+  }
+}
 
 footer {
   width: 100%;
@@ -510,25 +488,24 @@ footer {
 #imgFooter {
   display: flex;
   justify-content: start;
-  width: 300px;
+  width: 200px;
   height: 200px;
 }
 
 li a {
   font-weight: 300;
 }
-.listaFooter{
+.listaFooter {
   padding: 0;
 }
 
-
-@media (min-width:577px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .contenedorLogo {
-    display: flex;  
-    justify-content: center
+    display: flex;
+    justify-content: center;
   }
 
-  .listaFooter{
+  .listaFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -550,7 +527,7 @@ li a {
     align-items: center;
   }
 
-  .listaFooter{
+  .listaFooter {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -565,8 +542,8 @@ li a {
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
-    ul,ol{
-        padding-left: 0rem;
-    }
+  ul,
+  ol {
+    padding-left: 0rem;
+  }
 }
-
