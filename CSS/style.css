@@ -353,6 +353,9 @@ main{
   main{
     top: 153px;
   }
+  .text-start{
+    margin: 15px;
+  }
 }
 
 
