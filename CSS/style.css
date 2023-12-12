@@ -28,7 +28,6 @@ a{
   border-radius: 20px;
   box-sizing:content-box;
   width: 40%;
-  margin-top:5rem;
 }
 
 #listaNavbar a {
@@ -75,6 +74,13 @@ a{
     rgba(180, 22, 200, 1) 100%
   );
 }
+
+#mainRegistro{
+  position: static;
+  height: fit-content;
+  margin-top: 25px;
+}
+
 @media (min-width: 1200px) and (max-width: 1400px) {
   #listaNavbar a {
     padding: 0;
