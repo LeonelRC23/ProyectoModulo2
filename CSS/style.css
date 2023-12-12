@@ -56,7 +56,7 @@ html{
       rgba(0, 192, 255, 1) 0%,
       rgba(180, 22, 200, 1) 100%
     );
-
+}
 @media (min-width: 1200px) and (max-width: 1400px){
     #listaNavbar a {
         padding: 0;
