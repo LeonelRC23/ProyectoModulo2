@@ -1,3 +1,4 @@
+
 body {
   background-color: #312c32;
 }
@@ -6,9 +7,27 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+a{
+    font-family: "Roboto", sans-serif;
+}
+
 .container img {
   width: 5rem;
   height: 5rem;
+}
+
+#textoRegistro {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+}
+
+
+.contenedorForm{
+  background: #ffffff;
+  box-shadow: 0 0 2px 0 rgb(189, 127, 143);
+  border-radius: 20px;
+  box-sizing:content-box;
+  width: 40%;
 }
 
 #listaNavbar a {
@@ -55,6 +74,13 @@ html {
     rgba(180, 22, 200, 1) 100%
   );
 }
+
+#mainRegistro{
+  position: static;
+  height: fit-content;
+  margin-top: 25px;
+}
+
 @media (min-width: 1200px) and (max-width: 1400px) {
   #listaNavbar a {
     padding: 0;
@@ -303,12 +329,18 @@ main {
     padding: 0;
     border-radius: 20px;
   }
+
   .carousel-control-next,
   .carousel-control-prev {
     width: 20px;
   }
-  .row p {
+  .row p{
     font-size: 16px;
+  }
+
+  .contenedorForm{
+    width: 80%;
+    margin-top: 2rem;
   }
   main {
     top: 123px;
@@ -322,6 +354,10 @@ main {
     margin: 10px;
     border-radius: 50%;
   }
+
+  .contenedorForm{
+    width: 65%;
+    margin-top: 2rem;
   .row p {
     font-size: 20px;
   }
@@ -334,6 +370,7 @@ main {
     height: 180px;
     width: 180px;
   }
+}
   main {
     top: 153px;
   }
