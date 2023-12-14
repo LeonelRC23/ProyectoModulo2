@@ -35,7 +35,6 @@
       >
         <div class="container">
           <a class="navbar-brand m-lg-0" href="#">
-
             <img src="./IMG/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
           </a>
           <button
@@ -53,28 +52,34 @@
             <div id="elementosNavbar">
               <ul class="navbar-nav me-auto mx-lg-5" id="listaNavbar">
                 <div class="d-flex mb-md-3" id="elementosNav">
-
                   <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
-
                     <a class="nav-link active" aria-current="page" href="#">
                       <i class="fa-solid fa-house"></i>
                       Inicio
                     </a>
                   </li>
                   <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
-
                     <a class="nav-link" href="#">
                       <i class="fa-solid fa-globe"></i>
                       Libreria</a
                     >
                   </li>
-
                   <li class="nav-item p-lg-2 px-xl-2 mx-md-3 py-sm-3">
                     <a class="nav-link" href="#">
                       <i class="fa-solid fa-bookmark"></i>
 
                       Lista de reproduccion
                     </a>
+                  </li>
+                  <li class="nav-item dropdown p-lg-2 px-xl-2 mx-md-3 py-sm-3">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Administrador
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./pages/abmCanciones.html">ABM Canciones</a></li>
+                      <li><a class="dropdown-item" href="./pages/abmAlbumes.html">ABM Albumes</a></li>
+                      <li><a class="dropdown-item" href="./pages/abmArtistas.html">ABM Artistas</a></li>
+                    </ul>
                   </li>
                 </div>
                 <form
@@ -83,9 +88,7 @@
                 >
                   <input
                     id="inputBuscar"
-
                     class="form-control me-2 p-lg-2 mx-xl-2"
-
                     type="search"
                     placeholder="Buscar"
                     aria-label="Buscar"
@@ -106,7 +109,11 @@
               >
                 Iniciar sesión
               </button>
-              <button class="btn btn-success fs-5 botonesUsuario" type="submit" onclick="location.href='./pages/registro.html';">
+              <button
+                class="btn btn-success fs-5 botonesUsuario"
+                type="submit"
+                onclick="location.href='./pages/registro.html';"
+              >
                 Registrate
               </button>
             </div>
@@ -114,101 +121,10 @@
         </div>
       </nav>
     </header>
-
     <main>
       <section class="container-fluid seccion-carousel">
-        <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="d-flex flex-row justify-content-around">
-                <a href="./pages/artista.html"
-                  class="d-flex justify-content-center flex-column selecion-artista"
-                >
-                  <img
-                    src="./img/dimash-front.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Dimash</p>
-                </a>
-                <div
-                  class="d-flex justify-content-center flex-column selecion-artista"
-                >
-                  <img
-                    src="./img/fito-paez.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Fito Paez</p>
-                </div>
-                <div
-                  class="d-flex justify-content-center flex-column d-none d-sm-block selecion-artista"
-                >
-                  <img
-                    src="./img/artista3.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">AC/DC</p>
-                </div>
-
-                <div
-                  class="d-flex justify-content-center flex-column d-none d-sm-block selecion-artista"
-                >
-                  <img
-                    src="./img/artista4.webp"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Daddy Yankee</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex flex-row justify-content-around">
-                <div
-                  class="d-flex justify-content-center flex-column selecion-artista"
-                >
-                  <img
-                    src="./img/maria-becerra-getty11-e.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Maria Becerra</p>
-                </div>
-                <div
-                  class="d-flex justify-content-center flex-column selecion-artista"
-                >
-                  <img
-                    src="./img/artista6.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Los Redondos</p>
-                </div>
-                <div
-                  class="d-flex justify-content-center flex-column d-none d-sm-block selecion-artista"
-                >
-                  <img
-                    src="./img/artista7.webp"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Bad Bunny</p>
-                </div>
-
-                <div
-                  class="d-flex justify-content-center flex-column d-none d-sm-block selecion-artista"
-                >
-                  <img
-                    src="./img/artista8.jpg"
-                    class="d-block"
-                    alt="imagen de artista"
-                  />
-                  <p class="text-center text-white">Ke Personajes</p>
-                </div>
-              </div>
-            </div>
+        <div id="carouselExample" class="carousel slide h-100">
+          <div class="carousel-inner h-100" id="inyectarCarouselInner">
           </div>
           <button
             class="carousel-control-prev d-flex justify-content-start"
@@ -259,7 +175,6 @@
                 alt="imagen de album"
               />
               <div class="icono-superpuesto">
-
                 <a href="./pages/error404.html"
                   ><i class="bi bi-play-circle-fill"></i
                 ></a>
@@ -275,7 +190,6 @@
                 alt="imagen de album"
               />
               <div class="icono-superpuesto">
-
                 <a href="./pages/error404.html"
                   ><i class="bi bi-play-circle-fill"></i
                 ></a>
@@ -306,7 +220,6 @@
                 alt="imagen de album"
               />
               <div class="icono-superpuesto">
-
                 <a href="./pages/error404.html"
                   ><i class="bi bi-play-circle-fill"></i
                 ></a>
@@ -325,7 +238,6 @@
                 <a href="./pages/error404.html"
                   ><i class="bi bi-play-circle-fill"></i
                 ></a>
-
               </div>
               <p class="text-center text-white">Animal</p>
             </div>
@@ -736,6 +648,7 @@
       src="https://kit.fontawesome.com/166a168cfc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./JS/app.js"></script>
+    <script src="./JS/localStorage.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>

@@ -66,14 +66,14 @@ a{
   background: #fafafa10 !important;
   backdrop-filter: blur(0.4rem);
 }
-.seccion-carousel {
+/* .seccion-carousel {
   background: rgb(0, 192, 255);
   background: linear-gradient(
     90deg,
     rgba(0, 192, 255, 1) 0%,
     rgba(180, 22, 200, 1) 100%
   );
-}
+} */
 
 #mainRegistro{
   position: static;
@@ -125,8 +125,8 @@ main {
 }
 
 .seccion-carousel {
-  height: auto;
-  padding: 20px 0;
+  height: 30vw;
+  padding: 0;
 }
 
 .carousel-control-next,
@@ -135,6 +135,7 @@ main {
 }
 
 .selecion-artista {
+  background-color: rgba(0, 0, 0, 0.386);
   cursor: pointer;
 }
 
