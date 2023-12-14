@@ -294,6 +294,7 @@ main {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+
   li,
   form {
     margin: 0.5rem;
