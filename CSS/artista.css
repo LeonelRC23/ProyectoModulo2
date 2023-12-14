@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+
+main {
+  background: #312c32;
+}
+a {
+  cursor: pointer;
+}
+.fondoPortada {
+  max-width: 100%;
+  height: auto;
+  padding: 0%;
+  background: linear-gradient(to top, #5552b9, #990981);
+}
+.artistaImg {
+  border-radius: 100%;
+}
+.botonPlayArtista {
+  border-radius: 100px;
+}
+.botonPlay {
+  font-size: 40px;
+  color: yellow;
+}
+.botonPlay:hover{
+  color: rgb(230, 243, 243);
+  transform: translateY(4px);
+}
+.artistNombre {
+  font-family: "Roboto", sans-serif;
+}
+.artistaGenero {
+  font-family: "Roboto", sans-serif;
+}
+.conjuntoAlbum {
+  width: 45%;
+}
+.conjuntoAlbum:hover{
+  box-shadow: 15px 15px 20px #0f1516dc;
+  transform: translateY(-4px);
+}
+.fondoFavoritos {
+  position: relative;
+  max-width: 100%;
+}
+.iconoSuperpuesto {
+  color: #a9a9a9;
+  font-size: 149px;
+  position: absolute;
+  top: 48.5%;
+  left: 49.7%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: none;
+}
+.imagenFondo {
+  width: 100%;
+  height: auto;
+}
+.tituloFavoritos {
+  padding-top: 20px;
+}
+.infoAlbum {
+  display: none;
+}
+.imgFondoPista {
+  padding: 5px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/audiofondo.avif);
+  background-position-y: 25%;
+}
+.iconsPistas {
+  position: relative;
+  top: 15px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .datosArtista {
+    padding-top: 20%;
+  }
+  .albumSugeridos {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .conjuntoAlbum {
+    width: 25%;
+  }
+  .iconoSuperpuesto {
+    display: none;
+  }
+  .infoAlbum {
+    display: none;
+  }
+  .imgFondoPista {
+    padding: 5px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../img/audiofondo.avif);
+    background-position-y: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .artistaImg {
+    width: 75%;
+    position: relative;
+    top: 30px;
+    left: 60px;
+  }
+  .controlCancion {
+    position: relative;
+    top: 20px;
+  }
+  .nombreCancion {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+  .datosArtista {
+    padding-top: 10%;
+  }
+  .tituloTop {
+    display: flex;
+    padding-left: 30px;
+    font-family: "Roboto", sans-serif;
+  }
+  .listasArtista {
+    margin: 0px;
+  }
+  .tituloFavoritos {
+    padding-top: 80px;
+    display: none;
+  }
+  .conjuntoAlbum {
+    width: 35%;
+  }
+  .albumSugeridos {
+    padding-top: 60px;
+  }
+  .iconoSuperpuesto {
+    color: #a9a9a9;
+    font-size: 150px;
+    position: absolute;
+    top: 48%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .imgFondoPista {
+    padding: 5px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../img/audiofondo.avif);
+    background-position-y: 25%;
+  }
+  .imgFondoPista:hover{
+    box-shadow: 15px 15px 20px #0f1516dc;
+    transform: translateY(-4px); 
+  }
+  .botonPlay {
+    font-size: 60px;
+    color: yellow;
+  }
+  .iconsPistas {
+    position: relative;
+    top: 4px;
+    font-size: 8px;
+  }
+  .iconsPistas2{
+    position: relative;
+    top: 8px;
+    font-size: 20px;
+  }
+  .listaAleatoria {
+    width: 80%;
+    position: relative;
+    left: 150px;
+  }
+  .imagenFondo:hover{
+    box-shadow: 15px 15px 20px #0f1516dc;
+    transform: translateY(-4px);
+  }
+  .infoAlbum {
+    display: inherit;
+  }
+}
