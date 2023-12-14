@@ -294,6 +294,11 @@ main {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+  #elementosNavbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   li,
   form {
