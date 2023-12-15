@@ -11,6 +11,12 @@ a{
     font-family: "Roboto", sans-serif;
 }
 
+.reproducir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container img {
   width: 5rem;
   height: 5rem;

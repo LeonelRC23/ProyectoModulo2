@@ -38,13 +38,13 @@ function borrarCancion(idCancion) {
 }
 
 const tomarDatosAgregar = () => {
-    botonAgregarCancion.addEventListener("click", () => {
+  botonAgregarCancion.addEventListener("click", () => {
     let cancionObjeto = new Cancion(
       crypto.randomUUID(),
       agregarNombreCancion.value.trim(),
       listaAlbumes.value,
       agregarImagenCancion.value.trim(),
-      agregarVideoCancion.value.trim(),
+      agregarVideoCancion.value.trim()
     );
     let arrayAux = [...canciones];
     arrayAux.push(cancionObjeto);
@@ -63,16 +63,26 @@ const listarAlbumes = () => {
 
 const agregarCancion = () => {
   for (let i = 0; i < canciones.length; i++) {
-    // let arrayAux = [...artistas];
-    // let objetoArtista = arrayAux.filter(
-    //   (artista) => artista.id == albumes[i].idArtista
-    // )[0];
-    // console.log(objetoArtista);
+    let nombreDelArtista = "";
+    for (let j = 0; j < albumes.length; j++) {
+      if (canciones[i].idAlbum == albumes[j].id) {
+        for (let k = 0; k < artistas.length; k++) {
+          if (albumes[j].idArtista == artistas[k].id) {
+            nombreDelArtista = artistas[k].nombre;
+          }
+        }
+      }
+    }
+    let arrayAux = [...albumes];
+    let objetoAlbumes = arrayAux.filter(
+      (albumes) => albumes.id == canciones[i].idAlbum
+    )[0];
     let tr = document.createElement("tr");
     tr.innerHTML = `
         <th scope="row">${i + 1}</th>
         <td>${canciones[i].nombre}</td>
-        <td>${"Hola"}</td>
+        <td>${objetoAlbumes.nombre}</td>
+        <td>${nombreDelArtista}</td>
         <td>
           <div class="botonesABM">
             <div>
@@ -124,7 +134,9 @@ const agregarCancion = () => {
                       <div id="nombreCancion" class="form-text"></div>
                     </div>
                     <div class="mb-3">
-                    <select name="listaAlbumes" class="form-select" id="${"listaAlbumes" + canciones[i].id}">
+                    <select name="listaAlbumes" class="form-select" id="${
+                      "listaAlbumes" + canciones[i].id
+                    }">
                       <option value="">Ninguno</option>
                     </select>
                   </div>
@@ -135,16 +147,18 @@ const agregarCancion = () => {
                       <input value="${
                         canciones[i].imgURL
                       }" type="url" class="form-control" id="${
-                        "imagenURL" + canciones[i].id
-                      }" />
+      "imagenURL" + canciones[i].id
+    }" />
                     </div>
                     <div class="mb-3">
                     <label for="cancionVideoURL" class="form-label"
                       >URL del video de la cancion</label
                     >
                     <input  value="${
-                        canciones[i].videoURL
-                      }" type="url" class="form-control" id="${"cancionVideoURL" + canciones[i].id}" />
+                      canciones[i].videoURL
+                    }" type="url" class="form-control" id="${
+      "cancionVideoURL" + canciones[i].id
+    }" />
                   </div>
                     <div class="mb-3">
                       <button
@@ -180,22 +194,27 @@ const agregarCancion = () => {
         `;
     tabla.appendChild(tr);
 
-    
     const inputNombre = document.getElementById(
       "nombreCancion" + canciones[i].id
     );
-    const selectAlbumes = document.getElementById("listaAlbumes" + canciones[i].id);
-    for (let j = 0; j < albumes.length; j++) {
-        selectAlbumes.innerHTML += `
-            <option ${(canciones[i].idAlbum == albumes[j].id) && "selected=selected"} value="${albumes[j].id}">${albumes[j].nombre}</option>
-            `;
-      }
-    const inputimagenURL = document.getElementById(
-        "imagenURL" + canciones[i].id
+    const selectAlbumes = document.getElementById(
+      "listaAlbumes" + canciones[i].id
     );
-    const inputVideoURL = document.getElementById("cancionVideoURL" + canciones[i].id);
+    for (let j = 0; j < albumes.length; j++) {
+      selectAlbumes.innerHTML += `
+            <option ${
+              canciones[i].idAlbum == albumes[j].id && "selected=selected"
+            } value="${albumes[j].id}">${albumes[j].nombre}</option>
+            `;
+    }
+    const inputimagenURL = document.getElementById(
+      "imagenURL" + canciones[i].id
+    );
+    const inputVideoURL = document.getElementById(
+      "cancionVideoURL" + canciones[i].id
+    );
     const botonModificar = document.getElementById(
-        "btnModificarCancion" + canciones[i].id
+      "btnModificarCancion" + canciones[i].id
     );
     botonModificar.addEventListener("click", () => {
       let arrayAux = [...canciones];
@@ -204,7 +223,7 @@ const agregarCancion = () => {
         nombre: inputNombre.value.trim(),
         idAlbum: selectAlbumes.value,
         imgURL: inputimagenURL.value.trim(),
-        videoURL: inputVideoURL.value.trim()
+        videoURL: inputVideoURL.value.trim(),
       };
       arrayAux = arrayAux.filter((objeto) => objeto.id != canciones[i].id);
       arrayAux.push(objetoMod);
