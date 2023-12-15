@@ -165,21 +165,21 @@ const agregarCancion = () => {
                     >
                       <option value="">Ninguno</option>
                       <option ${
-                        canciones[i].categoria == "categoria1" &&
+                        canciones[i].categoria == "Reggaeton" &&
                         "selected=selected"
-                      } value="categoria1">Categoria 1</option>
+                      } value="Reggaeton">Reggaeton</option>
                       <option ${
-                        canciones[i].categoria == "categoria2" &&
+                        canciones[i].categoria == "Urbano" &&
                         "selected=selected"
-                      } value="categoria2">Categoria 2</option>
+                      } value="Urbano">Urbano</option>
                       <option ${
-                        canciones[i].categoria == "categoria3" &&
+                        canciones[i].categoria == "Rock" &&
                         "selected=selected"
-                      }value="categoria3">Categoria 3</option>
+                      }value="Rock">Rock</option>
                       <option ${
-                        canciones[i].categoria == "categoria4" &&
+                        canciones[i].categoria == "Pop" &&
                         "selected=selected"
-                      } value="categoria4">Categoria 4</option>
+                      } value="Pop">Pop</option>
                     </select>
                   </div>
                     <div class="mb-3">
