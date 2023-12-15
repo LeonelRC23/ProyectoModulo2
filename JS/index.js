@@ -1,18 +1,27 @@
 const inyectarCarouselInner = document.getElementById(`inyectarCarouselInner`);
 const inyectarCanciones = document.getElementById(`seccionCanciones`);
 const rowInyectarCanciones = document.getElementById(`rowInyectarCanciones`);
+const inputBuscarCancion = document.getElementById("inputBuscarCancion");
 
-const cargarTodasLasCanciones = () => {
-  for(let i = 0 ; i < canciones.length; i++){
+const cargarTodasLasCanciones = (cancionesListado) => {
+  rowInyectarCanciones.innerHTML = "";
+
+  for (let i = 0; i < cancionesListado.length; i++) {
     rowInyectarCanciones.innerHTML += `
     <div class="col-6 col-md-4 d-flex colCaratulaCancion">
-    <div class="d-flex mt-4">
-      <img class="img-fluid" src="https://hips.hearstapps.com/es.h-cdn.co/hares/images/cultura/ocio/portadas-de-discos-y-de-albums-de-musica-mas-importantes-del-s.xx/the-dark-side-of-the-moon-pink-floyd-1973/4247827-1-esl-ES/the-dark-side-of-the-moon-pink-floyd-1973.jpg?resize=980:*" alt="">
-    </div>
-    </div>
-    `
+              <a class="d-flex mt-4" href="${
+                "./pages/detalleCancion.html?id=" + cancionesListado[i].id
+              }">
+                <img
+                  class="img-fluid"
+                  src="${cancionesListado[i].imgURL}"
+                  alt=""
+                />
+              </a>
+            </div>
+    `;
   }
-}
+};
 
 const cargarInformacion = () => {
   for (let i = 0; i < artistas.length; i++) {
@@ -66,14 +75,15 @@ const cargarInformacion = () => {
         `;
     }
   }
-}
+};
 
 const cargarCancionesIndex = () => {
-  for(let i = 0; i < 5; i++){
-    if(canciones[i]){
+  for (let i = 0; i < 5; i++) {
+    if (canciones[i]) {
       let arrayAux = [...albumes];
       let objetoAlbumes = arrayAux.filter(
-        (albumes) => albumes.id == canciones[i].idAlbum)[0];
+        (albumes) => albumes.id == canciones[i].idAlbum
+      )[0];
       let nombreDelArtista = "";
       for (let j = 0; j < albumes.length; j++) {
         if (canciones[i].idAlbum == albumes[j].id) {
@@ -90,7 +100,29 @@ const cargarCancionesIndex = () => {
         class="row m-0 card-body text-bg-dark pistaMusica"
       >
         <div class="d-flex justify-content-center btn-play col-2">
+          <a href="${
+            canciones[i].videoURL
+          }" target="_blank" data-bs-toggle="modal" data-bs-target="${
+        "#verCancion" + canciones[i].id
+      }">
           <i class="bi bi-play-circle reproducir"></i>
+          </a>
+          
+          <div class="modal fade" id="${
+            "verCancion" + canciones[i].id
+          }" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+               
+                <div class="modal-body d-flex">
+                <iframe width="560" height="315" src="${
+                  canciones[i].iframeURLvideo
+                }" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                
+              </div>
+            </div>
+</div>
         </div>
   
         <div class="col-4 d-flex flex-column align-items-center justify-content-center">
@@ -115,11 +147,27 @@ const cargarCancionesIndex = () => {
         </div>
       </div>
     </div>
-      `
+      `;
     }
   }
-}
+};
 
 cargarInformacion();
 cargarCancionesIndex();
-// cargarTodasLasCanciones();
+cargarTodasLasCanciones(canciones);
+
+const buscarCancion = (busqueda) => {
+  let arrayAux = [...canciones];
+  let arrayCanciones = [];
+  arrayAux.map(
+    (objeto, i) =>
+      objeto.nombre.toLowerCase().includes(busqueda.toLowerCase().trim()) &&
+      arrayCanciones.push(objeto)
+  );
+
+  cargarTodasLasCanciones(arrayCanciones);
+};
+
+inputBuscarCancion.addEventListener("keyup", (e) => {
+  buscarCancion(e.target.value);
+});

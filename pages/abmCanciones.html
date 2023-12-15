@@ -89,12 +89,12 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li class="text-center">
-                        <a class="dropdown-item" href="#"
-                          >ABM Canciones</a
-                        >
+                        <a class="dropdown-item" href="#">ABM Canciones</a>
                       </li>
                       <li class="text-center">
-                        <a class="dropdown-item" href="./abmAlbumes.html">ABM Albumes</a>
+                        <a class="dropdown-item" href="./abmAlbumes.html"
+                          >ABM Albumes</a
+                        >
                       </li>
                       <li class="text-center">
                         <a class="dropdown-item" href="./abmArtistas.html"
@@ -193,15 +193,50 @@
                     <input type="url" class="form-control" id="cancionImgURL" />
                   </div>
                   <div class="mb-3">
-                    <select name="listaAlbumes" class="form-select" id="listaAlbumes">
+                    <label for="listaAlbumes" class="form-label">Album</label>
+                    <select
+                      name="listaAlbumes"
+                      class="form-select"
+                      id="listaAlbumes"
+                    >
                       <option value="">Ninguno</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="selectCategoria" class="form-label"
+                      >Categoria</label
+                    >
+                    <select
+                      name="selectCategoria"
+                      class="form-select"
+                      id="selectCategoria"
+                    >
+                      <option value="">Ninguno</option>
+                      <option value="categoria1">Categoria 1</option>
+                      <option value="categoria2">Categoria 2</option>
+                      <option value="categoria3">Categoria 3</option>
+                      <option value="categoria4">Categoria 4</option>
                     </select>
                   </div>
                   <div class="mb-3">
                     <label for="cancionVideoURL" class="form-label"
                       >URL del video de la cancion</label
                     >
-                    <input type="url" class="form-control" id="cancionVideoURL" />
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="cancionVideoURL"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cancionVideoURLIframe" class="form-label"
+                      >URL del video-IFRAME de la cancion</label
+                    >
+                    <input
+                      type="url"
+                      class="form-control"
+                      id="cancionVideoURLIframe"
+                    />
                   </div>
                   <div class="mb-3">
                     <button
@@ -230,6 +265,7 @@
           <tr>
             <th scope="col">id</th>
             <th scope="col">Nombre de la cancion</th>
+            <th scope="col">Categoria</th>
             <th scope="col">Album</th>
             <th scope="col">Artista</th>
             <th scope="col">Opciones</th>

@@ -4,18 +4,28 @@ const agregarImagenCancion = document.getElementById(`cancionImgURL`);
 const agregarVideoCancion = document.getElementById(`cancionVideoURL`);
 const botonAgregarCancion = document.getElementById(`botonAgregar`);
 const listaAlbumes = document.getElementById(`listaAlbumes`);
+const selectCategoria = document.getElementById(`selectCategoria`);
+const cancionVideoURLIframe = document.getElementById("cancionVideoURLIframe");
 
 class Cancion {
-  constructor(id, nombre, idAlbum, imgURL, videoURL) {
+  constructor(
+    id,
+    nombre,
+    idAlbum,
+    imgURL,
+    videoURL,
+    categoria,
+    iframeURLvideo
+  ) {
     this.id = id;
     this.nombre = nombre;
     this.idAlbum = idAlbum;
     this.imgURL = imgURL;
     this.videoURL = videoURL;
+    this.categoria = categoria;
+    this.iframeURLvideo = iframeURLvideo;
   }
 }
-
-console.log(canciones);
 
 function borrarCancion(idCancion) {
   Swal.fire({
@@ -44,7 +54,9 @@ const tomarDatosAgregar = () => {
       agregarNombreCancion.value.trim(),
       listaAlbumes.value,
       agregarImagenCancion.value.trim(),
-      agregarVideoCancion.value.trim()
+      agregarVideoCancion.value.trim(),
+      selectCategoria.value,
+      cancionVideoURLIframe.value.trim()
     );
     let arrayAux = [...canciones];
     arrayAux.push(cancionObjeto);
@@ -81,6 +93,7 @@ const agregarCancion = () => {
     tr.innerHTML = `
         <th scope="row">${i + 1}</th>
         <td>${canciones[i].nombre}</td>
+        <td>${canciones[i].categoria}</td>
         <td>${objetoAlbumes.nombre}</td>
         <td>${nombreDelArtista}</td>
         <td>
@@ -134,10 +147,39 @@ const agregarCancion = () => {
                       <div id="nombreCancion" class="form-text"></div>
                     </div>
                     <div class="mb-3">
+                    <label for="listaAlbumes" class="form-label">Album</label>
                     <select name="listaAlbumes" class="form-select" id="${
                       "listaAlbumes" + canciones[i].id
                     }">
                       <option value="">Ninguno</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="selectCategoria" class="form-label"
+                      >Categoria</label
+                    >
+                    <select
+                      name="selectCategoria"
+                      class="form-select"
+                      id="${"selectCategoria" + canciones[i].id}"
+                    >
+                      <option value="">Ninguno</option>
+                      <option ${
+                        canciones[i].categoria == "categoria1" &&
+                        "selected=selected"
+                      } value="categoria1">Categoria 1</option>
+                      <option ${
+                        canciones[i].categoria == "categoria2" &&
+                        "selected=selected"
+                      } value="categoria2">Categoria 2</option>
+                      <option ${
+                        canciones[i].categoria == "categoria3" &&
+                        "selected=selected"
+                      }value="categoria3">Categoria 3</option>
+                      <option ${
+                        canciones[i].categoria == "categoria4" &&
+                        "selected=selected"
+                      } value="categoria4">Categoria 4</option>
                     </select>
                   </div>
                     <div class="mb-3">
@@ -159,6 +201,17 @@ const agregarCancion = () => {
                     }" type="url" class="form-control" id="${
       "cancionVideoURL" + canciones[i].id
     }" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cancionVideoURLIframe" class="form-label"
+                      >URL del video-IFRAME de la cancion</label
+                    >
+                    <input
+                    value="${canciones[i].iframeURLvideo}"
+                      type="url"
+                      class="form-control"
+                      id="${"cancionVideoURLIframe" + canciones[i].id}"
+                    />
                   </div>
                     <div class="mb-3">
                       <button
@@ -200,6 +253,9 @@ const agregarCancion = () => {
     const selectAlbumes = document.getElementById(
       "listaAlbumes" + canciones[i].id
     );
+    const selectCategoria = document.getElementById(
+      "selectCategoria" + canciones[i].id
+    );
     for (let j = 0; j < albumes.length; j++) {
       selectAlbumes.innerHTML += `
             <option ${
@@ -213,6 +269,9 @@ const agregarCancion = () => {
     const inputVideoURL = document.getElementById(
       "cancionVideoURL" + canciones[i].id
     );
+    const inputVideoURLIframe = document.getElementById(
+      "cancionVideoURLIframe" + canciones[i].id
+    );
     const botonModificar = document.getElementById(
       "btnModificarCancion" + canciones[i].id
     );
@@ -224,6 +283,8 @@ const agregarCancion = () => {
         idAlbum: selectAlbumes.value,
         imgURL: inputimagenURL.value.trim(),
         videoURL: inputVideoURL.value.trim(),
+        categoria: selectCategoria.value,
+        iframeURLvideo: inputVideoURLIframe.value.trim(),
       };
       arrayAux = arrayAux.filter((objeto) => objeto.id != canciones[i].id);
       arrayAux.push(objetoMod);
