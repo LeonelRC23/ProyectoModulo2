@@ -68,37 +68,39 @@ let arrayAlbumes = [
   },
 ];
 
-let arrayCanciones = [
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 1",
-  },
+// let arrayCanciones = [
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 1",
+//     imgURL:
+//     album: "1"
+//   },
 
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 2",
-  },
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 2",
+//   },
 
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 3",
-  },
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 3",
+//   },
 
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 4",
-  },
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 4",
+//   },
 
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 5",
-  },
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 5",
+//   },
 
-  {
-    id: crypto.randomUUID(),
-    nombre: "cancion 6",
-  },
-];
+//   {
+//     id: crypto.randomUUID(),
+//     nombre: "cancion 6",
+//   },
+// ];
 
 let artistas = JSON.parse(localStorage.getItem(`artistasKey`)) || [];
 if(artistas.length == 0){
@@ -109,6 +111,6 @@ if(albumes.length == 0){
 localStorage.setItem(`albumesKey`, JSON.stringify([]));
 }
 let canciones = JSON.parse(localStorage.getItem(`cancionesKey`)) || [];
-// if(canciones.length == 0){
-localStorage.setItem(`cancionesKey`, JSON.stringify(arrayCanciones));
-// }
+if(canciones.length == 0){
+localStorage.setItem(`cancionesKey`, JSON.stringify([]));
+}
