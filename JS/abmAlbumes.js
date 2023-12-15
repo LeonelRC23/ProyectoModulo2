@@ -64,7 +64,6 @@ const agregarAlbum = () => {
     let objetoArtista = arrayAux.filter(
       (artista) => artista.id == albumes[i].idArtista
     )[0];
-    console.log(objetoArtista);
     let tr = document.createElement("tr");
     tr.innerHTML = `
         <th scope="row">${i + 1}</th>

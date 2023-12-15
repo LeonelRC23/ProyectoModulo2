@@ -52,24 +52,49 @@
             <div id="elementosNavbar">
               <ul class="navbar-nav mx-lg-5" id="listaNavbar">
                 <div class="d-flex mb-md-1" id="elementosNav">
-                  <li class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start" id="itemNav">
+                  <li
+                    class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
+                    id="itemNav"
+                  >
                     <a class="nav-link active" aria-current="page" href="#">
                       Inicio
                     </a>
                   </li>
-                  <li class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start">
-                    <a class="nav-link" href="#">
-                      Lista de reproduccion
-                    </a>
+                  <li
+                    class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
+                  >
+                    <a class="nav-link" href="#"> Lista de reproduccion </a>
                   </li>
-                  <li class="nav-item dropdown p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <li
+                    class="nav-item dropdown p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
+                  >
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       Administrador
                     </a>
                     <ul class="dropdown-menu">
-                      <li class="text-center"><a class="dropdown-item" href="./pages/abmCanciones.html">ABM Canciones</a></li>
-                      <li class="text-center"><a class="dropdown-item" href="./pages/abmAlbumes.html">ABM Albumes</a></li>
-                      <li class="text-center"><a class="dropdown-item" href="./pages/abmArtistas.html">ABM Artistas</a></li>
+                      <li class="text-center">
+                        <a
+                          class="dropdown-item"
+                          href="./pages/abmCanciones.html"
+                          >ABM Canciones</a
+                        >
+                      </li>
+                      <li class="text-center">
+                        <a class="dropdown-item" href="./pages/abmAlbumes.html"
+                          >ABM Albumes</a
+                        >
+                      </li>
+                      <li class="text-center">
+                        <a class="dropdown-item" href="./pages/abmArtistas.html"
+                          >ABM Artistas</a
+                        >
+                      </li>
                     </ul>
                   </li>
                 </div>
@@ -115,8 +140,7 @@
     <main>
       <section class="container-fluid seccion-carousel">
         <div id="carouselExample" class="carousel slide h-100">
-          <div class="carousel-inner h-100" id="inyectarCarouselInner">
-          </div>
+          <div class="carousel-inner h-100" id="inyectarCarouselInner"></div>
           <button
             class="carousel-control-prev d-flex justify-content-start"
             type="button"
@@ -138,7 +162,24 @@
         </div>
       </section>
       <h2 class="text-white mx-3 mt-5">Canciones destacadas</h2>
-      <section class="my-3 mx-0" id="seccionCanciones">
+      <section class="my-3 mx-0" id="seccionCanciones"></section>
+      <section class="my-5">
+        <div class="d-flex flex-column container">
+          <div>
+            <h2 class="text-white mx-3 mt-5">Todas las canciones</h2>
+          </div>
+          <div class="row m-0" id="rowInyectarCanciones">
+            <div class="col-6 col-md-4 d-flex colCaratulaCancion">
+              <a class="d-flex mt-4" href="">
+                <img
+                  class="img-fluid"
+                  src="https://hips.hearstapps.com/es.h-cdn.co/hares/images/cultura/ocio/portadas-de-discos-y-de-albums-de-musica-mas-importantes-del-s.xx/the-dark-side-of-the-moon-pink-floyd-1973/4247827-1-esl-ES/the-dark-side-of-the-moon-pink-floyd-1973.jpg?resize=980:*"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="my-5">
         <div class="container text-center">
