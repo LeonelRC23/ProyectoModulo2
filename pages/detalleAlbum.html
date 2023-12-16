@@ -23,7 +23,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/style.css" />
 
     <title>SoundG3</title>
   </head>
@@ -35,7 +35,7 @@
       >
         <div class="container">
           <a class="navbar-brand m-lg-0" href="#">
-            <img src="./IMG/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
+            <img src="../IMG/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
           </a>
           <button
             class="navbar-toggler"
@@ -48,28 +48,28 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse align-items-center justify-content-center" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div id="elementosNavbar">
-              <ul class="navbar-nav mx-lg-5 mx-md-4" id="listaNavbar">
+              <ul class="navbar-nav mx-lg-5" id="listaNavbar">
                 <div class="d-flex mb-md-1" id="elementosNav">
                   <li
                     class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
                     id="itemNav"
                   >
-                    <a class="nav-link active fs-5" aria-current="page" href="#">
+                    <a class="nav-link active" aria-current="page" href="/">
                       Inicio
                     </a>
                   </li>
                   <li
                     class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
                   >
-                    <a class="nav-link fs-5" href="./pages/listaDeReproduccion.html"> Lista de reproduccion </a>
+                    <a class="nav-link" href="#"> Lista de reproduccion </a>
                   </li>
                   <li
                     class="nav-item dropdown p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
                   >
                     <a
-                      class="nav-link dropdown-toggle fs-5"
+                      class="nav-link dropdown-toggle"
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -77,38 +77,56 @@
                     >
                       Administrador
                     </a>
-                    <ul class="dropdown-menu text-center">
+                    <ul class="dropdown-menu">
                       <li class="text-center">
                         <a
-                          class="dropdown-item fs-5"
+                          class="dropdown-item"
                           href="./pages/abmCanciones.html"
                           >ABM Canciones</a
                         >
                       </li>
                       <li class="text-center">
-                        <a class="dropdown-item fs-5" href="./pages/abmAlbumes.html"
+                        <a class="dropdown-item" href="./pages/abmAlbumes.html"
                           >ABM Albumes</a
                         >
                       </li>
                       <li class="text-center">
-                        <a class="dropdown-item fs-5" href="./pages/abmArtistas.html"
+                        <a class="dropdown-item" href="./pages/abmArtistas.html"
                           >ABM Artistas</a
                         >
                       </li>
                     </ul>
                   </li>
                 </div>
+                <form
+                  class="d-flex justify-content-center align-items-center p-lg-0 px-xl-2"
+                  role="search"
+                >
+                  <input
+                    id="inputBuscar"
+                    class="form-control me-2 p-lg-2 mx-xl-2"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Buscar"
+                  />
+                  <a href="#" type="submit" id="buscarNavbar" class="mx-2">
+                    <i
+                      class="fa-solid fa-magnifying-glass"
+                      style="color: #ffffff"
+                    ></i>
+                  </a>
+                </form>
               </ul>
             </div>
             <div class="d-flex flex-column">
               <button
-                class="btn btn-success my-3 fs-6 botonesUsuario"
+                class="btn btn-success my-3 fs-5 botonesUsuario"
                 type="submit"
               >
                 Iniciar sesión
               </button>
               <button
-                class="btn btn-success fs-6 botonesUsuario"
+                class="btn btn-success fs-5 botonesUsuario"
                 type="submit"
                 onclick="location.href='./pages/registro.html';"
               >
@@ -120,150 +138,7 @@
       </nav>
     </header>
     <main>
-      <section class="container-fluid seccion-carousel">
-        <div id="carouselExample" class="carousel slide h-100">
-          <div class="carousel-inner h-100" id="inyectarCarouselInner"></div>
-          <button
-            class="carousel-control-prev d-flex justify-content-start"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next d-flex justify-content-end"
-            type="button"
-            data-bs-target="#carouselExample"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-      <h2 class="text-white mx-3 mt-5">Canciones destacadas</h2>
-      <section class="my-3 mx-0" id="seccionCanciones"></section>
-      <section class="my-5">
-        <div class="d-flex flex-column container">
-          <div>
-            <h2 class="text-white mx-3 mt-5">Todas las canciones</h2>
-          </div>
-          <div class="d-flex">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Buscar Canción"
-              id="inputBuscarCancion"
-            />
-          </div>
-          <div class="row m-0" id="rowInyectarCanciones"></div>
-        </div>
-      </section>
-      <section class="my-5">
-        <div class="container text-center">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mt-3">
-              <div class="card custom-card">
-                <div class="card-body text-bg-dark p-3">
-                  <h5 class="card-title my-3">
-                    Plan Básico: "Melodía Esencial"
-                  </h5>
-                  <ul class="text-start">
-                    <li>Precio: $4.99 al mes</li>
-                    <li>
-                      Acceso ilimitado a la biblioteca de música estándar.
-                    </li>
-                    <li>Calidad de transmisión estándar (128 kbps).</li>
-                    <li>Anuncios ocasionales entre canciones.</li>
-                    <li>
-                      Posibilidad de crear listas de reproducción
-                      personalizadas.
-                    </li>
-                    <li>
-                      Descarga de hasta 30 canciones al mes para escuchar sin
-                      conexión.
-                    </li>
-                    <li>Soporte en dispositivos móviles y de escritorio.</li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-dark">
-                  <a href="#" class="btn btn-primary">Saber más</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mt-3">
-              <div class="card custom-card">
-                <div class="card-body text-bg-dark p-3">
-                  <h5 class="card-title my-3">
-                    Plan Estándar: "Armonía Completa"
-                  </h5>
-                  <ul class="text-start">
-                    <li>Precio: $9.99 al mes</li>
-                    <li>Acceso completo a la biblioteca de música premium.</li>
-                    <li>Calidad de transmisión mejorada (320 kbps).</li>
-                    <li>Sin anuncios durante la reproducción.</li>
-                    <li>
-                      Creación de listas de reproducción ilimitadas y
-                      personalizadas.
-                    </li>
-                    <li>
-                      Descarga ilimitada de canciones para escuchar sin
-                      conexión.
-                    </li>
-                    <li>Función de recomendaciones personalizadas.</li>
-                    <li>
-                      Soporte en dispositivos móviles, de escritorio y
-                      dispositivos inteligentes.
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-dark">
-                  <a href="#" class="btn btn-primary">Saber más</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 mt-3">
-              <div class="card custom-card">
-                <div class="card-body text-bg-dark p-3">
-                  <h5 class="card-title my-3">
-                    Plan Premium: "Sinfonía Total"
-                  </h5>
-                  <ul class="text-start">
-                    <li>Precio: $14.99 al mes</li>
-                    <li>
-                      Acceso a la biblioteca completa de música, incluyendo
-                      lanzamientos exclusivos.
-                    </li>
-                    <li>
-                      Calidad de transmisión de alta fidelidad (lossless).
-                    </li>
-                    <li>Reproducción sin interrupciones y sin anuncios.</li>
-                    <li>
-                      Creación de listas de reproducción colaborativas con otros
-                      usuarios.
-                    </li>
-                    <li>
-                      Descarga ilimitada de canciones y álbumes completos para
-                      escuchar sin conexión.
-                    </li>
-                    <li>Acceso a eventos en vivo y conciertos exclusivos.</li>
-                    <li>
-                      Soporte en dispositivos móviles, de escritorio,
-                      dispositivos inteligentes y sistemas de audio de alta
-                      gama.
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer bg-dark">
-                  <a href="#" class="btn btn-primary">Saber más</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="inyectarAlbumDetalle"></section>
     </main>
     <footer>
       <div class="text-center py-3">
@@ -298,7 +173,7 @@
               </li>
               <li class="mt-3 list-unstyled">
                 <a
-                  href="./pages/registro.html"
+                  href=""
                   class="link-light link-underline-opacity-10 link-underline-opacity-50-hover text-light"
                   >Registro</a
                 >
@@ -381,7 +256,7 @@
       src="https://kit.fontawesome.com/166a168cfc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./JS/localStorage.js"></script>
-    <script src="./JS/index.js"></script>
+    <script src="../JS/localStorage.js"></script>
+    <script src="../JS/detalleAlbum.js"></script>
   </body>
 </html>

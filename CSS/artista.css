@@ -22,7 +22,7 @@ a {
   font-size: 40px;
   color: yellow;
 }
-.botonPlay:hover{
+.botonPlay:hover {
   color: rgb(230, 243, 243);
   transform: translateY(4px);
 }
@@ -35,7 +35,7 @@ a {
 .conjuntoAlbum {
   width: 45%;
 }
-.conjuntoAlbum:hover{
+.conjuntoAlbum:hover {
   box-shadow: 15px 15px 20px #0f1516dc;
   transform: translateY(-4px);
 }
@@ -74,6 +74,16 @@ a {
   top: 15px;
 }
 
+.contenedorImagen img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.conjuntoAlbum {
+  border-radius: 5px;
+}
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .datosArtista {
@@ -85,9 +95,7 @@ a {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .conjuntoAlbum {
-    width: 25%;
-  }
+
   .iconoSuperpuesto {
     display: none;
   }
@@ -153,10 +161,10 @@ a {
       url(../img/audiofondo.avif);
     background-position-y: 25%;
   }
-  .imgFondoPista:hover{
+  /* .imgFondoPista:hover {
     box-shadow: 15px 15px 20px #0f1516dc;
-    transform: translateY(-4px); 
-  }
+    transform: translateY(-4px);
+  } */
   .botonPlay {
     font-size: 60px;
     color: yellow;
@@ -166,7 +174,7 @@ a {
     top: 4px;
     font-size: 8px;
   }
-  .iconsPistas2{
+  .iconsPistas2 {
     position: relative;
     top: 8px;
     font-size: 20px;
@@ -176,7 +184,7 @@ a {
     position: relative;
     left: 150px;
   }
-  .imagenFondo:hover{
+  .imagenFondo:hover {
     box-shadow: 15px 15px 20px #0f1516dc;
     transform: translateY(-4px);
   }
