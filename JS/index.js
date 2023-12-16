@@ -36,7 +36,7 @@ const cargarInformacion = () => {
           "
         >
           <a
-            href="./pages/artista.html"
+            href="${"./pages/artista.html?id=" + artistas[i].id}"
             class="d-flex justify-content-center align-items-center flex-column selecion-artista w-100"
           >
             <img
@@ -60,7 +60,7 @@ const cargarInformacion = () => {
           "
         >
           <a
-            href="./pages/artista.html"
+          href="${"./pages/artista.html?id=" + artistas[i].id}"
             class="d-flex justify-content-center align-items-center flex-column selecion-artista w-100"
           >
             <img

@@ -45,6 +45,19 @@ a {
   height: 5rem;
 }
 
+.visualizarImagen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.visualizarImagen img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
 #textoRegistro {
   font-family: "Roboto", sans-serif;
   font-size: 17px;

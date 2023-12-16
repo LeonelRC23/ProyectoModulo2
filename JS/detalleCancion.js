@@ -18,7 +18,7 @@ const inyectarDetalleCancion = () => {
 
   inyectarCancionDetalle.innerHTML = `
   <div class="row m-0">
-  <div class="col-5 colImgCancion">
+  <div class="col-12 col-sm-5 colImgCancion">
     <div class="d-flex">
       <img
         class="img-fluid"
@@ -27,7 +27,7 @@ const inyectarDetalleCancion = () => {
       />
     </div>
   </div>
-  <div class="col-7 colDetalleCancion">
+  <div class="col-12 col-sm-7 colDetalleCancion">
     <div class="d-flex flex-column">
       <div class="d-flex flex-column">
         <h2>Nombre de la canción:</h2>

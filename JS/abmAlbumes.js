@@ -120,7 +120,9 @@ const agregarAlbum = () => {
                       <div id="nombreAlbum" class="form-text"></div>
                     </div>
                     <div class="mb-3">
-                    <select name="listaArtistas" class="form-select" id="${"listaArtistas" + albumes[i].id}">
+                    <select name="listaArtistas" class="form-select" id="${
+                      "listaArtistas" + albumes[i].id
+                    }">
                       <option value="">Ninguno</option>
                     </select>
                   </div>
@@ -128,11 +130,19 @@ const agregarAlbum = () => {
                       <label for="imagenURL" class="form-label"
                         >URL de la imagen del album</label
                       >
+                      <div class="visualizarImagen">
+                      <img
+
+                        class="img-fluid"
+                        src="${albumes[i].imgURL}"
+                        alt=""
+                      />
+                    </div>
                       <input value="${
                         albumes[i].imgURL
                       }" type="url" class="form-control" id="${
-                        "imagenURL" + albumes[i].id
-                      }" />
+      "imagenURL" + albumes[i].id
+    }" />
                     </div>
                     <div class="mb-3">
                       <button
@@ -168,19 +178,18 @@ const agregarAlbum = () => {
         `;
     tabla.appendChild(tr);
 
-    
-    const inputNombre = document.getElementById(
-      "nombreAlbum" + albumes[i].id
+    const inputNombre = document.getElementById("nombreAlbum" + albumes[i].id);
+    const selectArtistas = document.getElementById(
+      `listaArtistas` + albumes[i].id
     );
-    const selectArtistas = document.getElementById(`listaArtistas` + albumes[i].id);
     for (let j = 0; j < artistas.length; j++) {
-        selectArtistas.innerHTML += `
-            <option ${(albumes[i].idArtista == artistas[j].id) && "selected=selected"} value="${artistas[j].id}">${artistas[j].nombre}</option>
+      selectArtistas.innerHTML += `
+            <option ${
+              albumes[i].idArtista == artistas[j].id && "selected=selected"
+            } value="${artistas[j].id}">${artistas[j].nombre}</option>
             `;
-      }
-    const inputimagenURL = document.getElementById(
-      "imagenURL" + albumes[i].id
-    );
+    }
+    const inputimagenURL = document.getElementById("imagenURL" + albumes[i].id);
     const botonModificar = document.getElementById(
       "btnModificarAlbum" + albumes[i].id
     );
@@ -190,7 +199,8 @@ const agregarAlbum = () => {
         id: albumes[i].id,
         nombre: inputNombre.value.trim(),
         imgURL: inputimagenURL.value.trim(),
-        idArtista: selectArtistas.value
+
+        idArtista: selectArtistas.value,
       };
       arrayAux = arrayAux.filter((objeto) => objeto.id != albumes[i].id);
       arrayAux.push(objetoMod);

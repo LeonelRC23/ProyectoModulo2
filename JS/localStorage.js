@@ -48,7 +48,8 @@ let arrayAlbumes = [
     nombre: "Album 1",
     imgURL:
       "https://assets.turbologo.com/blog/es/2022/04/07043402/06-958x575.png",
-    idArtista: arrayArtistas[3].id
+
+    idArtista: arrayArtistas[3].id,
   },
 
   {
@@ -56,15 +57,16 @@ let arrayAlbumes = [
     nombre: "Album 2",
     imgURL:
       "https://assets.turbologo.com/blog/es/2022/04/07043402/06-958x575.png",
-      idArtista: arrayArtistas[0].id
-  },
+
+    idArtista: arrayArtistas[0].id,
 
   {
     id: crypto.randomUUID(),
     nombre: "Album 3",
     imgURL:
       "https://assets.turbologo.com/blog/es/2022/04/07043402/06-958x575.png",
-      idArtista: arrayArtistas[2].id
+
+    idArtista: arrayArtistas[2].id,
   },
 ];
 
@@ -103,14 +105,32 @@ let arrayAlbumes = [
 // ];
 
 let artistas = JSON.parse(localStorage.getItem(`artistasKey`)) || [];
-if(artistas.length == 0){
-localStorage.setItem(`artistasKey`, JSON.stringify(arrayArtistas));
+if (artistas.length == 0) {
+  localStorage.setItem(`artistasKey`, JSON.stringify(arrayArtistas));
 }
 let albumes = JSON.parse(localStorage.getItem(`albumesKey`)) || [];
-if(albumes.length == 0){
-localStorage.setItem(`albumesKey`, JSON.stringify([]));
+if (albumes.length == 0) {
+  localStorage.setItem(`albumesKey`, JSON.stringify([]));
 }
 let canciones = JSON.parse(localStorage.getItem(`cancionesKey`)) || [];
-if(canciones.length == 0){
-localStorage.setItem(`cancionesKey`, JSON.stringify([]));
+if (canciones.length == 0) {
+  localStorage.setItem(`cancionesKey`, JSON.stringify([]));
+}
+
+let usuarios = JSON.parse(localStorage.getItem(`usuariosKey`)) || [];
+if (usuarios.length == 0) {
+  localStorage.setItem(
+    "usuariosKey",
+    JSON.stringify([
+      {
+        id: crypto.randomUUID(),
+        nombreCompleto: "Administrador",
+        usuario: "Admin",
+        email: "admin@admin.com",
+        contraseña: "admin",
+        rol: "admin",
+        habilitado: true,
+      },
+    ])
+  );
 }
