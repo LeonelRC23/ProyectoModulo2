@@ -5,287 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
     />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="../css/artista.css" />
     <title>Maria Becerra: Te Cura-SoundG3</title>
-    <link rel="shortcut icon" href="../img/FavIcon/android-chrome-512x512.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../img/FavIcon/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <head></head>
     <main>
       <section class="container-fluid fondoPortada pb-5">
         <div>
-          <div class="row">
-            <div class="col-sm-12 col-md-5 col-lg-3 pt-5 pb-4 contenedorImagen">
-              <img
-                src="../img/mariaBecerra/maria-becerra-portada.webp"
-                alt="caratula maria becerra"
-                class="img-fluid artistaImg"
-              />
-              <div
-                class="d-flex pt-3 pe-0 justify-content-center controlCancion"
-              >
-                <a href="#" role="button"
-                  ><i class="bi bi-play-circle-fill botonPlay"></i
-                ></a>
-                <p class="mt-3 ms-2 text-light fw-medium nombreCancion">
-                  Te cura
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-7 col-lg-5 datosArtista">
-              <p class="text-center text-light mb-0 artistNombre">Artist:</p>
-              <h2 class="text-light text-center">Maria Becerra</h2>
-              <p class="text-center text-light mb-0 artistaGenero">Género:</p>
-              <p class="text-center text-light pb-5 h4">Pop Urbano</p>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-4">
-              <h2 class="text-light text-center albumSugeridos">
-                Albums sugeridos
-              </h2>
-              <div class="row">
-                <div class="col-12 text">
-                  <div class="text-center pb-2">
-                    <a href="#">
-                      <img
-                        src="../img/mariaBecerra/maria_becerra2.jpg"
-                        alt="caratula album maria becerra"
-                        class="conjuntoAlbum"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="../img/mariaBecerra/maria-becerra4.webp"
-                        alt="caratula album maria becerra"
-                        class="conjuntoAlbum"
-                      />
-                    </a>
-                  </div>
-                  <div class="text-center pc-2">
-                    <a href="#">
-                      <img
-                        src="../img/mariaBecerra/maria-becerra1.avif"
-                        alt="caratula album maria becerra"
-                        class="conjuntoAlbum"
-                      />
-                    </a>
-                    <a href="#">
-                      <img
-                        src="../img/mariaBecerra/maria-becerra3.webp"
-                        alt="caratula album maria becerra"
-                        class="conjuntoAlbum"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row m-0" id="inyectarArtistaDetalle"></div>
         </div>
       </section>
       <section class="container-fluid">
-        <p class="h2 text-light pt-4 pb-4 text-center tituloTop">Top Canciones</p>
+        <p class="h2 text-light pt-4 pb-4 text-center tituloTop">
+          Top Canciones
+        </p>
         <div class="row">
-          <div class="col-12">
-            <div class="row border imgFondoPista">
-              <div class="col-2 col-md-4 col-lg-1 pt-1 ps-2">
-                <a href="#"
-                  ><i
-                    class="bi bi-play-circle text-light fs-1 ps-3 iconsPistas"
-                  ></i
-                ></a>
-              </div>
-              <div class="col-7 text-light col-md-4 col-lg-4 ps-3 px-0">
-                <p class="pt-2 mb-0 text-center">La nena de argentina</p>
-                <p class="pe- text-center">Maria Becera</p>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4 text-light infoAlbum">
-                <p class="pt-4">Album: La nena de argentina</p>
-              </div>
-              <div class="col-3 col-md-4 col-lg-3 text-center px-0 iconsPistas2 pt-2">
-                <a href="#"><i class="bi bi-heart fs-5 text-light meGusta"></i></a>
-                <a href="#"
-                  ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
-              </div>
-            </div>
-            <div class="row border imgFondoPista">
-              <div class="col-2 col-md-4 col-lg-1 pt-1 ps-2">
-                <a href="#" class=""
-                  ><i
-                    class="bi bi-play-circle text-light fs-1 ps-3 iconsPistas"
-                  ></i
-                ></a>
-              </div>
-              <div class="col-7 text-light col-md-4 col-lg-4 ps-3 px-0">
-                <p class="pt-2 mb-0 text-center">Pidelo</p>
-                <p class="pe- text-center">Maria Becerra</p>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4 text-light infoAlbum">
-                <p class="pt-4">Album: La nena de argentina</p>
-              </div>
-              <div class="col-3 col-md 4 col-lg-3 text-center px-0 iconsPistas2 pt-2">
-                <a href="#"><i class="bi bi-heart fs-5 text-light meGusta"></i></a>
-                <a href="#"
-                  ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
-              </div>
-            </div>
-            <div class="row border imgFondoPista">
-              <div class="col-2 col-md-4 col-lg-1 pt-1 ps-2">
-                <a href="#" class=""
-                  ><i
-                    class="bi bi-play-circle text-light fs-1 ps-3 iconsPistas"
-                  ></i
-                ></a>
-              </div>
-              <div class="col-7 text-light col-md-4 col-lg-4 ps-3 px-0">
-                <p class="pt-2 mb-0 text-center">Nada de amor</p>
-                <p class="text-center">Maria Becerra</p>
-              </div>
-              <div class="col-12 col-md-4 text-light infoAlbum">
-                <p class="pt-4">Album: 222</p>
-              </div>
-              <div class="col-3 col-md 4 col-lg-3 text-center px-0 iconsPistas2 pt-2">
-                <a href="#"><i class="bi bi-heart fs-5 text-light meGusta"></i></a>
-                <a href="#"
-                  ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
-              </div>
-            </div>
-            <div class="row border imgFondoPista">
-              <div class="col-2 col-md-4 col-lg-1 pt-1 ps-2">
-                <a href="#" class=""
-                  ><i
-                    class="bi bi-play-circle text-light fs-1 ps-3 iconsPistas"
-                  ></i
-                ></a>
-              </div>
-              <div class="col-7 text-light col-md-4 col-lg-4 ps-3 px-0">
-                <p class="pt-2 mb-0 text-center">Animal</p>
-                <p class="pe- text-center">Maria Becerra</p>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4 text-light infoAlbum">
-                <p class="pt-4">Album: Animal</p>
-              </div>
-              <div class="col-3 col-md-4 col-lg-3 text-center px-0 iconsPistas2 pt-2">
-                <a href="#"><i class="bi bi-heart fs-5 text-light meGusta"></i></a>
-                <a href="#"
-                  ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
-              </div>
-            </div>
-            <div class="row border imgFondoPista">
-              <div class="col-2 col-md-4 col-lg-1 pt-1 ps-2">
-                <a href="#" class=""
-                  ><i
-                    class="bi bi-play-circle text-light fs-1 ps-3 iconsPistas"
-                  ></i
-                ></a>
-              </div>
-              <div class="col-7 text-light col-md-4 col-lg-4 ps-3 px-0">
-                <p class="pt-2 mb-0 text-center">Acaramelao</p>
-                <p class="pe- text-center">Maria Becerra</p>
-              </div>
-              <div class="col-12 col-md-4 col-lg-4 text-light infoAlbum">
-                <p class="pt-4">Album: Animal</p>
-              </div>
-              <div class="col-3 col-md 4 col-lg-3 text-center px-0 iconsPistas2 pt-2">
-                <a href="#"><i class="bi bi-heart fs-5 text-light meGusta"></i></a>
-                <a href="#"
-                  ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="container-fluid pb-4 otrosInterpretes">
-        <p class="h2 text-light pt-4 pb-4 text-center tituloTop">Te puede interesar...</p>
-        <div class="row listaAleatoria">
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark ">
-            <a href="#" class="m-4">
-              <i class="bi bi-plus-circle iconoSuperpuesto "></i>
-              <img
-                src="../img/favoritodisco.jpg"
-                class="card-img imagenFondo"
-                alt="Imagen disco"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/Taylor-Swift.webp"
-                class="card-img imagenFondo"
-                alt="Taylor Swift"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/wos1.jpg"
-                class="card-img imagenFondo"
-                alt="Wos"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/metallica3.jpg"
-                class="card-img imagenFondo"
-                alt="Metallica"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="row listaAleatoria">
-          <div class="col-6 col-md-3 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/LosRedonditos.jpg"
-                class="card-img imagenFondo"
-                alt="Los redonditos"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/fito-paez_yo-te-amor.jpg"
-                class="card-img imagenFondo"
-                alt="Fito Paez"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/ke-personaje-album.webp"
-                class="card-img imagenFondo"
-                alt="Le personaje"
-              />
-            </a>
-          </div>
-          <div class="col-6 col-md-3 pt-2 card text-bg-dark">
-            <a href="#">
-              <img
-                src="../img/losBeatles.jpg"
-                class="card-img imagenFondo"
-                alt="the beatles"
-              />
-            </a>
-          </div>
+          <div class="col-12" id="inyectarTopCanciones"></div>
         </div>
       </section>
     </main>
@@ -300,5 +50,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../JS/localStorage.js"></script>
+    <script src="../JS/artista.js"></script>
   </body>
 </html>

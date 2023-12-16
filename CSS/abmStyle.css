@@ -1,0 +1,14 @@
+
+table {
+    text-align: center;
+}
+
+.botonesABM {
+    display: flex;
+    justify-content: center;
+}
+
+.botonesABM button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}

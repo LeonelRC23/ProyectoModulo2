@@ -37,13 +37,12 @@
                 >Nombre de Usuario</label
               >
               <div class="input-group has-validation">
-                <span class="input-group-text" id="inputGroupPrepend3">@</span>
                 <input
                   type="text"
                   class="form-control"
                   id="nombredeUsuario"
                   aria-describedby="inputGroupPrepend3 nombredeUsuarioFeedback"
-                  placeholder="tuUsuario"
+                  placeholder="Nombre de usuario"
                   minlength="6"
                   maxlength="20"
                   required
@@ -51,11 +50,11 @@
               </div>
             </div>
             <div class="col-md-12 col-xl-12 col-sm-12 pb-3">
-              <label for="Email" class="form-label">Correo Electrónico</label>
+              <label for="email" class="form-label">Correo Electrónico</label>
               <input
                 type="email"
                 class="form-control"
-                id="Email"
+                id="email"
                 placeholder="ejemplo@mail.com"
                 minlength="16"
                 maxlength="50"
@@ -63,11 +62,11 @@
               />
             </div>
             <div class="col-md-12 col-xl-12 col-sm-12 pb-3">
-              <label for="Contraseña" class="form-label">Contraseña</label>
+              <label for="contraseña" class="form-label">Contraseña</label>
               <input
                 type="password"
                 class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
-                id="Contraseña"
+                id="contraseña"
                 minlength="8"
                 maxlength="16"
                 required
@@ -80,7 +79,7 @@
               <input
                 type="password"
                 class="form-control focus-ring py-1 px-2 text-decoration-none border rounded-2"
-                id="Contraseña"
+                id="confirmarContraseña"
                 minlength="8"
                 maxlength="16"
                 required
@@ -89,7 +88,9 @@
           </fieldset>
         </form>
         <div class="d-grid">
-          <button class="btn btn-success" type="submit">Crear Cuenta</button>
+          <button class="btn btn-success" id="btnRegistrarse">
+            Crear Cuenta
+          </button>
         </div>
         <div class="d-flex flex-row justify-content-center">
           <p class="pe-3 pt-3" id="textoRegistro">¿Ya tienes una cuenta?</p>
@@ -212,5 +213,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../JS/localStorage.js"></script>
+    <script src="../JS/registro.js"></script>
   </body>
 </html>
