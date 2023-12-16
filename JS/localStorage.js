@@ -59,6 +59,7 @@ let arrayAlbumes = [
       "https://assets.turbologo.com/blog/es/2022/04/07043402/06-958x575.png",
 
     idArtista: arrayArtistas[0].id,
+  },
 
   {
     id: crypto.randomUUID(),
