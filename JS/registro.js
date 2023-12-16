@@ -4,6 +4,7 @@ const inputEmail = document.getElementById("email");
 const inputContraseña = document.getElementById("contraseña");
 const inputConfirmarContraseña = document.getElementById("confirmarContraseña");
 const btnRegistrarse = document.getElementById("btnRegistrarse");
+const localSTG = JSON.parse(localStorage.getItem(`usuariosKey`)) || [];
 
 btnRegistrarse.addEventListener("click", () => {
   // validaciones
@@ -18,7 +19,7 @@ btnRegistrarse.addEventListener("click", () => {
     habilitado: false,
   };
 
-  let arrayAux = [...usuarios];
+  let arrayAux = [...localSTG];
   //   console.log("antes: ", usuarios);
   arrayAux.push(usuario);
   //   console.log("despues: ", arrayAux);
