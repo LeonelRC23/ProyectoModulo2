@@ -58,10 +58,49 @@ const tomarDatosAgregar = () => {
       selectCategoria.value,
       cancionVideoURLIframe.value.trim()
     );
-    let arrayAux = [...canciones];
-    arrayAux.push(cancionObjeto);
-    localStorage.setItem(`cancionesKey`, JSON.stringify(arrayAux));
-    window.location.reload();
+
+    if (
+      agregarNombreCancion.value.trim() != "" &&
+      listaAlbumes.value != "" &&
+      agregarImagenCancion.value.trim() != "" &&
+      agregarVideoCancion.value.trim() != "" &&
+      selectCategoria.value != "" &&
+      cancionVideoURLIframe.value.trim() != ""
+    ) {
+      if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          cancionVideoURLIframe.value
+        )
+      ) {
+        alert("Url Iframe invalida");
+      } else if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          agregarImagenCancion.value
+        )
+      ) {
+        alert("Url Imagen invalida");
+      } else if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          agregarVideoCancion.value
+        )
+      ) {
+        alert("Url Video invalida");
+      } else {
+        let arrayAux = [...canciones];
+        arrayAux.push(cancionObjeto);
+        localStorage.setItem(`cancionesKey`, JSON.stringify(arrayAux));
+        window.location.reload();
+      }
+    } else if (
+      agregarNombreCancion.value.trim() == "" ||
+      listaAlbumes.value == "" ||
+      agregarImagenCancion.value.trim() == "" ||
+      agregarVideoCancion.value.trim() == "" ||
+      selectCategoria.value == "" ||
+      cancionVideoURLIframe.value.trim() == ""
+    ) {
+      alert("Cargue todos los campos");
+    }
   });
 };
 
@@ -173,12 +212,10 @@ const agregarCancion = () => {
                         "selected=selected"
                       } value="Urbano">Urbano</option>
                       <option ${
-                        canciones[i].categoria == "Rock" &&
-                        "selected=selected"
+                        canciones[i].categoria == "Rock" && "selected=selected"
                       }value="Rock">Rock</option>
                       <option ${
-                        canciones[i].categoria == "Pop" &&
-                        "selected=selected"
+                        canciones[i].categoria == "Pop" && "selected=selected"
                       } value="Pop">Pop</option>
                     </select>
                   </div>
@@ -286,11 +323,45 @@ const agregarCancion = () => {
         categoria: selectCategoria.value,
         iframeURLvideo: inputVideoURLIframe.value.trim(),
       };
-      arrayAux = arrayAux.filter((objeto) => objeto.id != canciones[i].id);
-      arrayAux.push(objetoMod);
-      console.log(arrayAux);
-      localStorage.setItem(`cancionesKey`, JSON.stringify(arrayAux));
-      window.location.reload();
+
+      if (
+        inputNombre.value.trim() != "" &&
+        selectAlbumes.value != "" &&
+        inputimagenURL.value.trim() != "" &&
+        inputVideoURL.value.trim() != "" &&
+        selectCategoria.value != "" &&
+        inputVideoURLIframe.value.trim() != ""
+      ) {
+        if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+            inputVideoURLIframe.value
+          )
+        ) {
+          alert("Url Iframe invalida");
+        } else if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(inputimagenURL.value)
+        ) {
+          alert("Url Imagen invalida");
+        } else if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(inputVideoURL.value)
+        ) {
+          alert("Url Video invalida");
+        } else {
+          arrayAux = arrayAux.filter((objeto) => objeto.id != canciones[i].id);
+          arrayAux.push(objetoMod);
+          localStorage.setItem(`cancionesKey`, JSON.stringify(arrayAux));
+          window.location.reload();
+        }
+      } else if (
+        inputNombre.value.trim() == "" ||
+        selectAlbumes.value == "" ||
+        inputimagenURL.value.trim() == "" ||
+        inputVideoURL.value.trim() == "" ||
+        selectCategoria.value == "" ||
+        inputVideoURLIframe.value.trim() == ""
+      ) {
+        alert("Cargue todos los campos");
+      }
     });
   }
 };

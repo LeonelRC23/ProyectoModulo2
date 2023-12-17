@@ -106,6 +106,13 @@ const inyectarNav = () => {
           >ABM Artistas</a
         >
       </li>
+      <li class="text-center">
+        <a
+          class="dropdown-item fs-5"
+          href="./pages/abmUsuarios.html"
+          >ABM Usuarios</a
+        >
+      </li>
     </ul>
       `;
     }
@@ -125,7 +132,7 @@ const inyectarNav = () => {
 
     btnCerrarSesion.addEventListener("click", () => {
       localStorage.removeItem("usuarioAutenticadoKey");
-      location.href = "./index.html";
+      location.href = "/";
     });
   } else {
     btnNavbar.innerHTML = `

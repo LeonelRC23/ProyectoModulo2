@@ -166,10 +166,35 @@ const agregarArtista = () => {
         imgURL: inputimagenURL.value.trim(),
         backgroudURL: inputimagenBackgroundURL.value.trim(),
       };
-      arrayAux = arrayAux.filter((objeto) => objeto.id != artistas[i].id);
-      arrayAux.push(objetoMod);
-      localStorage.setItem(`artistasKey`, JSON.stringify(arrayAux));
-      window.location.reload();
+
+      if (
+        inputNombre.value.trim() != "" &&
+        inputimagenURL.value.trim() != "" &&
+        inputimagenBackgroundURL.value.trim() != ""
+      ) {
+        if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(inputimagenURL.value)
+        ) {
+          alert("Url imagen artista invalida");
+        } else if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+            inputimagenBackgroundURL.value
+          )
+        ) {
+          alert("Url imagen background artista invalida");
+        } else {
+          arrayAux = arrayAux.filter((objeto) => objeto.id != artistas[i].id);
+          arrayAux.push(objetoMod);
+          localStorage.setItem(`artistasKey`, JSON.stringify(arrayAux));
+          window.location.reload();
+        }
+      } else if (
+        inputNombre.value.trim() == "" ||
+        inputimagenURL.value.trim() == "" ||
+        inputimagenBackgroundURL.value.trim() == ""
+      ) {
+        alert("Cargue todos los campos");
+      }
     });
   }
 };
@@ -182,10 +207,37 @@ const tomarDatosAgregar = () => {
       agregarImagenArtista.value.trim(),
       agregarImagenBackgroundArtista.value.trim()
     );
-    let arrayAux = [...artistas];
-    arrayAux.push(artistaObjeto);
-    localStorage.setItem(`artistasKey`, JSON.stringify(arrayAux));
-    window.location.reload();
+
+    if (
+      agregarNombreArtista.value.trim() != "" &&
+      agregarImagenArtista.value.trim() != "" &&
+      agregarImagenBackgroundArtista.value.trim() != ""
+    ) {
+      if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          agregarImagenArtista.value
+        )
+      ) {
+        alert("Url imagen artista invalida");
+      } else if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          agregarImagenBackgroundArtista.value
+        )
+      ) {
+        alert("Url imagen background artista invalida");
+      } else {
+        let arrayAux = [...artistas];
+        arrayAux.push(artistaObjeto);
+        localStorage.setItem(`artistasKey`, JSON.stringify(arrayAux));
+        window.location.reload();
+      }
+    } else if (
+      agregarNombreArtista.value.trim() == "" ||
+      agregarImagenArtista.value.trim() == "" ||
+      agregarImagenBackgroundArtista.value.trim() == ""
+    ) {
+      alert("Cargue todos los campos");
+    }
   });
 };
 
