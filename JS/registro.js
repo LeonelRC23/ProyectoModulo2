@@ -23,5 +23,14 @@ btnRegistrarse.addEventListener("click", () => {
   arrayAux.push(usuario);
   //   console.log("despues: ", arrayAux);
   localStorage.setItem("usuariosKey", JSON.stringify(arrayAux));
-  window.location.reload();
+  window.location.href = 'usuarios.html'
+  
 });
+
+
+
+
+
+
+
+
