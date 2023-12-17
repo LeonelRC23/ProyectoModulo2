@@ -31,3 +31,12 @@
 
        cellAcciones.appendChild(btnGroup);
    });
+
+   const eliminarUsuario = (id) => {
+    const confirmacion = confirm('¿Estás seguro de que quieres eliminar este usuario?');
+    if (confirmacion) {
+        const nuevosUsuarios = usuarios.filter(usuario => usuario.id !== id);
+        localStorage.setItem('usuariosKey', JSON.stringify(nuevosUsuarios));
+        window.location.reload();
+    }
+};
