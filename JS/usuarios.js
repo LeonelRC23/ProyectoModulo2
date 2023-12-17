@@ -24,7 +24,7 @@
        btnGroup.appendChild(btnEliminar);
 
        const btnModificar = document.createElement('button');
-       btnModificar.textContent = 'Modificar';
+       btnModificar.textContent = 'Editar';
        btnModificar.classList.add('btn', 'btn-warning', 'btn-sm');
        btnModificar.addEventListener('click', () => modificarUsuario(usuario.id));
        btnGroup.appendChild(btnModificar);
