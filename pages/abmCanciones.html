@@ -29,119 +29,7 @@
     <title>SoundG3</title>
   </head>
   <body>
-    <header class="fixed-top mb-5">
-      <nav
-        class="efectoBlur navbar navbar-expand-md bg-body-tertiary navbar bg-dark border-bottom border-body py-3"
-        data-bs-theme="dark"
-      >
-        <div class="container">
-          <a class="navbar-brand m-lg-0" href="#">
-            <img src="../img/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="elementosNavbar">
-              <ul class="navbar-nav mx-lg-5" id="listaNavbar">
-                <div class="d-flex mb-md-1" id="elementosNav">
-                  <li
-                    class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
-                    id="itemNav"
-                  >
-                    <a
-                      class="nav-link active"
-                      aria-current="page"
-                      href="../index.html"
-                    >
-                      Inicio
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
-                  >
-                    <a class="nav-link" href="#"> Libreria</a>
-                  </li>
-                  <li
-                    class="nav-item p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
-                  >
-                    <a class="nav-link" href="#"> Lista de reproduccion </a>
-                  </li>
-                  <li
-                    class="nav-item dropdown p-lg-2 px-xl-2 mx-md-2 py-md-2 py-sm-3 d-flex justify-content-center align-items-center justify-content-sm-start"
-                  >
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Administrador
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li class="text-center">
-                        <a class="dropdown-item" href="#">ABM Canciones</a>
-                      </li>
-                      <li class="text-center">
-                        <a class="dropdown-item" href="./abmAlbumes.html"
-                          >ABM Albumes</a
-                        >
-                      </li>
-                      <li class="text-center">
-                        <a class="dropdown-item" href="./abmArtistas.html"
-                          >ABM Artistas</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </div>
-                <form
-                  class="d-flex justify-content-center align-items-center p-lg-0 px-xl-2"
-                  role="search"
-                >
-                  <input
-                    id="inputBuscar"
-                    class="form-control me-2 p-lg-2 mx-xl-2"
-                    type="search"
-                    placeholder="Buscar"
-                    aria-label="Buscar"
-                  />
-                  <a href="#" type="submit" id="buscarNavbar" class="mx-2">
-                    <i
-                      class="fa-solid fa-magnifying-glass"
-                      style="color: #ffffff"
-                    ></i>
-                  </a>
-                </form>
-              </ul>
-            </div>
-            <div class="d-flex flex-column">
-              <button
-                class="btn btn-success my-3 fs-5 botonesUsuario"
-                type="submit"
-              >
-                Iniciar sesión
-              </button>
-              <button
-                class="btn btn-success fs-5 botonesUsuario"
-                type="submit"
-                onclick="location.href='./pages/registro.html';"
-              >
-                Registrate
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <header class="fixed-top mb-5" id="inyectarNavbar">
     </header>
     <main>
       <div class="botonesABM">
@@ -393,5 +281,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../JS/localStorage.js"></script>
     <script src="../JS/abmCanciones.js"></script>
+    <script src="../JS/navbarPage.js"></script>
   </body>
 </html>

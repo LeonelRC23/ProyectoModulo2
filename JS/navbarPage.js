@@ -9,8 +9,8 @@ const inyectarNav = () => {
   data-bs-theme="dark"
 >
   <div class="container">
-    <a class="navbar-brand m-lg-0" href="#">
-      <img src="./IMG/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
+    <a class="navbar-brand m-lg-0" href="../index.html">
+      <img src="../img/logosoundg3.png" alt="g3SoundGIF" id="imglogo" />
     </a>
     <button
       class="navbar-toggler"
@@ -37,7 +37,7 @@ const inyectarNav = () => {
               <a
                 class="nav-link active fs-5"
                 aria-current="page"
-                href="#"
+                href="../index.html"
               >
                 Inicio
               </a>
@@ -47,7 +47,7 @@ const inyectarNav = () => {
             >
               <a
                 class="nav-link fs-5"
-                href="./pages/listaDeReproduccion.html"
+                href="./listaDeReproduccion.html"
               >
                 Lista de reproduccion
               </a>
@@ -88,21 +88,21 @@ const inyectarNav = () => {
       <li class="text-center">
         <a
           class="dropdown-item fs-5"
-          href="./pages/abmCanciones.html"
+          href="./abmCanciones.html"
           >ABM Canciones</a
         >
       </li>
       <li class="text-center">
         <a
           class="dropdown-item fs-5"
-          href="./pages/abmAlbumes.html"
+          href="./abmAlbumes.html"
           >ABM Albumes</a
         >
       </li>
       <li class="text-center">
         <a
           class="dropdown-item fs-5"
-          href="./pages/abmArtistas.html"
+          href="./abmArtistas.html"
           >ABM Artistas</a
         >
       </li>

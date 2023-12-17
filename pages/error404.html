@@ -3,125 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Streaming de musica" />
-    <meta name="keywords" content="musica, streaming, artistas, tendencias" />
-    <meta name="author" content="Grupo 3" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="description" content="Página de error 404" />
+    <meta name="keywords" content="error, 404, error 404" />
+    <meta name="author" content="Sound3G" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="../CSS/abmStyle.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-
-    <title>SoundG3</title>
+    <link rel="stylesheet" href="../CSS/footer-style.css" />
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style404.css" />
+    <title>Error 404</title>
   </head>
   <body>
-    <header class="fixed-top mb-5" id="inyectarNavbar">
+    <header class="fixed-top mb-5" id="inyectarNavbar">    
     </header>
-    <main>
-      <div class="botonesABM">
-        <button
-          type="button"
-          class="btn btn-success m-3"
-          data-bs-toggle="modal"
-          data-bs-target="#agregarAlbumes"
+    <main class="fondopag">
+      <img
+        id="fondogr"
+        src="../img/fondo.png"
+        class="text-center fondo mb-0"
+        alt="imagen de error 404 con auriculares"
+      />
+      <img id="fondoch" class="text-center" src="../img/fondosm.png" alt="" />
+
+      <h1 class="text-center ohno">¡Oh no!</h1>
+      <h2 class="text-center text-white display-6">
+        No encontramos la pagina que buscas. Lo sentimos mucho.
+      </h2>
+
+      <div class="text-center" id="boton">
+        <a
+          href="../index.html"
+          role="button"
+          class="btn btn-lg botonDegradado botonInicio mb-3 text-white mt-3"
+          >Volver al inicio</a
         >
-          Agregar album
-        </button>
-        <div
-          class="modal fade"
-          id="agregarAlbumes"
-          tabindex="-1"
-          aria-labelledby="agregarAlbumesLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5">Agregar</h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="mb-3">
-                    <label for="nombreAlbum" class="form-label"
-                      >Nombre del album</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nombreAlbumAgregar"
-                      maxlength="50"
-                      minlength="1"
-                    />
-                    <div id="nombreAlbum" class="form-text"></div>
-                  </div>
-                  <div class="mb-3">
-                    <select
-                      name="listaArtistas"
-                      class="form-select"
-                      id="listaArtistas"
-                    >
-                      <option value="">Ninguno</option>
-                    </select>
-                  </div>
-                  <div class="mb-3">
-                    <label for="albumImgURL" class="form-label"
-                      >URL de la imagen del album</label
-                    >
-                    <input type="url" class="form-control" id="albumImgURL" />
-                  </div>
-                  <div class="mb-3">
-                    <button
-                      type="button"
-                      class="btn btn-danger"
-                      data-bs-dismiss="modal"
-                    >
-                      Cerrar
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      id="botonAgregar"
-                    >
-                      Guardar cambios
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">Nombre del album</th>
-            <th scope="col">Artista</th>
-            <th scope="col">Opciones</th>
-          </tr>
-        </thead>
-        <tbody id="cuerpoTablaAlbumes"></tbody>
-      </table>
     </main>
     <footer>
       <div class="text-center py-3">
@@ -131,11 +51,11 @@
             id="contenedorLogoFooter"
           >
             <a
-              href="index.html"
+              href="../index.html"
               class="contenedorLogo d-flex justify-content-center"
             >
               <img
-                src="./img/logosoundg3.png"
+                src="../img/logosoundg3.png"
                 alt="Logo"
                 class=""
                 id="imgFooter"
@@ -149,14 +69,14 @@
               </li>
               <li class="mt-3 list-unstyled">
                 <a
-                  href=""
+                  href="./iniciarSesion.html"
                   class="link-light link-underline-opacity-10 link-underline-opacity-50-hover text-light"
                   >Ingresar</a
                 >
               </li>
               <li class="mt-3 list-unstyled">
                 <a
-                  href=""
+                  href="./registro.html"
                   class="link-light link-underline-opacity-10 link-underline-opacity-50-hover text-light"
                   >Registro</a
                 >
@@ -177,7 +97,7 @@
               </li>
               <li class="mt-3 list-unstyled">
                 <a
-                  href=""
+                  href="./error404.html"
                   class="link-light link-underline-opacity-10 link-underline-opacity-50-hover text-light"
                   >Ayuda</a
                 >
@@ -231,17 +151,9 @@
       </div>
     </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script
       src="https://kit.fontawesome.com/166a168cfc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../JS/localStorage.js"></script>
-    <script src="../JS/abmAlbumes.js"></script>
     <script src="../JS/navbarPage.js"></script>
   </body>
 </html>
