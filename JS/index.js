@@ -2,6 +2,54 @@ const inyectarCarouselInner = document.getElementById(`inyectarCarouselInner`);
 const inyectarCanciones = document.getElementById(`seccionCanciones`);
 const rowInyectarCanciones = document.getElementById(`rowInyectarCanciones`);
 const inputBuscarCancion = document.getElementById("inputBuscarCancion");
+let usuarioAutenticadoKey =
+  JSON.parse(localStorage.getItem("usuarioAutenticadoKey")) || null;
+
+const agregarFavoritos = (idCancion) => {
+  console.log(idCancion);
+  if (usuarioAutenticadoKey == null) {
+    window.location.href = "/pages/iniciarSesion.html";
+  } else {
+    let objetoCancionFav = [...canciones].filter(
+      (objeto) => objeto.id == idCancion
+    )[0];
+
+    usuarioAutenticadoKey.listaFavoritos.push(objetoCancionFav.id);
+
+    let arrayAux = [...usuarios].filter(
+      (objeto) => objeto.id != usuarioAutenticadoKey.id
+    );
+
+    arrayAux.push(usuarioAutenticadoKey);
+
+    localStorage.setItem("usuariosKey", JSON.stringify(arrayAux));
+    localStorage.setItem(
+      "usuarioAutenticadoKey",
+      JSON.stringify(usuarioAutenticadoKey)
+    );
+    window.location.reload();
+  }
+};
+
+const eliminarFavoritos = (idCancion) => {
+  let arrayAux = [...usuarioAutenticadoKey.listaFavoritos].filter(
+    (objeto) => objeto != idCancion
+  );
+  usuarioAutenticadoKey.listaFavoritos = arrayAux;
+
+  let arrayAux2 = [...usuarios].filter(
+    (objeto) => objeto.id != usuarioAutenticadoKey.id
+  );
+
+  arrayAux2.push(usuarioAutenticadoKey);
+
+  localStorage.setItem("usuariosKey", JSON.stringify(arrayAux2));
+  localStorage.setItem(
+    "usuarioAutenticadoKey",
+    JSON.stringify(usuarioAutenticadoKey)
+  );
+  window.location.reload();
+};
 
 const cargarTodasLasCanciones = (cancionesListado) => {
   rowInyectarCanciones.innerHTML = "";
@@ -133,21 +181,55 @@ const cargarCancionesIndex = () => {
         <div class="nombreAlbum col-4 d-flex align-items-center justify-content-center">
           <p class="card-text fs-6">${objetoAlbumes.nombre}</p>
         </div>
-        <div class="btn-selecion col-2 d-flex align-items-center justify-content-center">
-          <i
-            id="corazon1"
-            class="bi bi-heart d-flex flex-column align-items-center justify-content-center"
-            onclick="cambiarIconoFavoritos('corazon1')"
-          ></i>
-          <i
-            id="agregar1"
-            class="bi bi-plus-circle d-flex flex-column align-items-center justify-content-center"
-            onclick="cambiarIconoAgregar('agregar1')"
-          ></i>
+        <div class="btn-selecion col-2 d-flex align-items-center justify-content-center" id="${
+          "btnFav" + canciones[i].id
+        }">
+        
+         
         </div>
       </div>
     </div>
       `;
+
+      let cancionEncontrada = usuarioAutenticadoKey.listaFavoritos.findIndex(
+        (objeto) => objeto == canciones[i].id
+      );
+
+      const btnFavInyectar = document.getElementById(
+        "btnFav" + canciones[i].id
+      );
+
+      if (cancionEncontrada != -1) {
+        let iTag = document.createElement("i");
+        iTag.classList.add(
+          "fa-regular",
+          "fa-circle-xmark",
+          "d-flex",
+          "flex-column",
+          "align-items-center",
+          "justify-content-center"
+        );
+        iTag.setAttribute(
+          "onclick",
+          "eliminarFavoritos('" + canciones[i].id + "')"
+        );
+        btnFavInyectar.appendChild(iTag);
+      } else {
+        let iTag = document.createElement("i");
+        iTag.classList.add(
+          "bi",
+          "bi-heart",
+          "d-flex",
+          "flex-column",
+          "align-items-center",
+          "justify-content-center"
+        );
+        iTag.setAttribute(
+          "onclick",
+          "agregarFavoritos('" + canciones[i].id + "')"
+        );
+        btnFavInyectar.appendChild(iTag);
+      }
     }
   }
 };

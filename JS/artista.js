@@ -3,6 +3,8 @@ let objetoArtista = [...artistas].filter((objeto) => objeto.id == urlId)[0];
 const inyectarCancionDetalle = document.getElementById(
   "inyectarCancionDetalle"
 );
+let usuarioAutenticadoKey =
+  JSON.parse(localStorage.getItem("usuarioAutenticadoKey")) || null;
 
 const inyectarArtistaDetalle = document.getElementById(
   "inyectarArtistaDetalle"
@@ -13,6 +15,52 @@ const inyectarTopCanciones = document.getElementById("inyectarTopCanciones");
 function onlyUnique(value, index, self) {
   return self.indexOf(value) === index;
 }
+
+const eliminarFavoritos = (idCancion) => {
+  let arrayAux = [...usuarioAutenticadoKey.listaFavoritos].filter(
+    (objeto) => objeto != idCancion
+  );
+  usuarioAutenticadoKey.listaFavoritos = arrayAux;
+
+  let arrayAux2 = [...usuarios].filter(
+    (objeto) => objeto.id != usuarioAutenticadoKey.id
+  );
+
+  arrayAux2.push(usuarioAutenticadoKey);
+
+  localStorage.setItem("usuariosKey", JSON.stringify(arrayAux2));
+  localStorage.setItem(
+    "usuarioAutenticadoKey",
+    JSON.stringify(usuarioAutenticadoKey)
+  );
+  window.location.reload();
+};
+
+const agregarFavoritos = (idCancion) => {
+  console.log(idCancion);
+  if (usuarioAutenticadoKey == null) {
+    window.location.href = "/pages/iniciarSesion.html";
+  } else {
+    let objetoCancionFav = [...canciones].filter(
+      (objeto) => objeto.id == idCancion
+    )[0];
+
+    usuarioAutenticadoKey.listaFavoritos.push(objetoCancionFav.id);
+
+    let arrayAux = [...usuarios].filter(
+      (objeto) => objeto.id != usuarioAutenticadoKey.id
+    );
+
+    arrayAux.push(usuarioAutenticadoKey);
+
+    localStorage.setItem("usuariosKey", JSON.stringify(arrayAux));
+    localStorage.setItem(
+      "usuarioAutenticadoKey",
+      JSON.stringify(usuarioAutenticadoKey)
+    );
+    window.location.reload();
+  }
+};
 
 const cargarArtista = () => {
   let arrayAlbumesArtistaInyectado = [];
@@ -141,17 +189,52 @@ const cargarArtista = () => {
                 <p class="pt-4">Album: ${objetoAlbumes.nombre}</p>
                 </div>
                 <div
-                class="col-3 col-md-4 col-lg-3 text-center px-0 iconsPistas2 pt-2"
-                >
-                <a href="#"
-                ><i class="bi bi-heart fs-5 text-light meGusta"></i
-                ></a>
-                <a href="#"
-                ><i class="bi bi-plus-circle fs-5 text-light"></i
-                ></a>
+                class="col-3 col-md-4 col-lg-3 text-center px-0 iconsPistas2 pt-2 d-flex justify-content-center"
+                id="${"btnFav" + arrayCancionesArtistaInyectado[i].id}">
+               
                 </div>
                 </div>
                 `;
+
+      let cancionEncontrada = usuarioAutenticadoKey.listaFavoritos.findIndex(
+        (objeto) => objeto == arrayCancionesArtistaInyectado[i].id
+      );
+
+      const btnFavInyectar = document.getElementById(
+        "btnFav" + arrayCancionesArtistaInyectado[i].id
+      );
+
+      if (cancionEncontrada != -1) {
+        let iTag = document.createElement("i");
+        iTag.classList.add(
+          "fa-regular",
+          "fa-circle-xmark",
+          "d-flex",
+          "flex-column",
+          "align-items-center",
+          "justify-content-center"
+        );
+        iTag.setAttribute(
+          "onclick",
+          "eliminarFavoritos('" + arrayCancionesArtistaInyectado[i].id + "')"
+        );
+        btnFavInyectar.appendChild(iTag);
+      } else {
+        let iTag = document.createElement("i");
+        iTag.classList.add(
+          "bi",
+          "bi-heart",
+          "d-flex",
+          "flex-column",
+          "align-items-center",
+          "justify-content-center"
+        );
+        iTag.setAttribute(
+          "onclick",
+          "agregarFavoritos('" + arrayCancionesArtistaInyectado[i].id + "')"
+        );
+        btnFavInyectar.appendChild(iTag);
+      }
     }
   } else {
     inyectarTopCanciones.innerHTML = `

@@ -131,6 +131,7 @@ if (usuarios.length == 0) {
         contraseña: "admin",
         rol: "admin",
         habilitado: true,
+        listaFavoritos: [],
       },
     ])
   );
