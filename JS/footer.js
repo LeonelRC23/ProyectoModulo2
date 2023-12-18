@@ -9,7 +9,7 @@ const inyectarFoot = () => {
         id="contenedorLogoFooter"
       >
         <a
-          href="index.html"
+          href="../index.html"
           class="contenedorLogo d-flex justify-content-center"
         >
           <img
@@ -48,7 +48,7 @@ const inyectarFoot = () => {
           </li>
           <li class="mt-3 list-unstyled">
             <a
-              href=""
+              href="../pages/sobreNosotros.html"
               class="link-light link-underline-opacity-10 link-underline-opacity-50-hover text-light"
               >Acerca de Nosotros</a
             >

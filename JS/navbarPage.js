@@ -139,14 +139,14 @@ const inyectarNav = () => {
     <button
     class="btn btn-success my-3 fs-6 botonesUsuario"
     type="submit"
-    onclick="location.href='./pages/iniciarSesion.html';"
+    onclick="location.href='./iniciarSesion.html';"
   >
     Iniciar sesión
   </button>
   <button
     class="btn btn-success fs-6 botonesUsuario"
     type="submit"
-    onclick="location.href='./pages/registro.html';"
+    onclick="location.href='./registro.html';"
   >
     Registrate
   </button>
