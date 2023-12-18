@@ -74,6 +74,15 @@ a {
   top: 15px;
 }
 
+.iconsPistas2 i {
+  color: white;
+  cursor: pointer;
+}
+
+.iconsPistas2 i:hover {
+  color: #4842f7;
+}
+
 .contenedorImagen img {
   width: 15rem;
   height: 15rem;

@@ -43,10 +43,31 @@ const tomarDatosAgregar = () => {
       agregarImagenAlbum.value.trim(),
       listaArtistas.value
     );
-    let arrayAux = [...albumes];
-    arrayAux.push(albumObjeto);
-    localStorage.setItem(`albumesKey`, JSON.stringify(arrayAux));
-    window.location.reload();
+
+    if (
+      agregarNombreAlbum.value.trim() != "" &&
+      agregarImagenAlbum.value.trim() != "" &&
+      listaArtistas.value != ""
+    ) {
+      if (
+        !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+          agregarImagenAlbum.value
+        )
+      ) {
+        alert("Url imagen album invalida");
+      } else {
+        let arrayAux = [...albumes];
+        arrayAux.push(albumObjeto);
+        localStorage.setItem(`albumesKey`, JSON.stringify(arrayAux));
+        window.location.reload();
+      }
+    } else if (
+      agregarNombreAlbum.value.trim() == "" ||
+      agregarImagenAlbum.value.trim() == "" ||
+      listaArtistas.value == ""
+    ) {
+      alert("Cargue todos los campos");
+    }
   });
 };
 
@@ -199,14 +220,33 @@ const agregarAlbum = () => {
         id: albumes[i].id,
         nombre: inputNombre.value.trim(),
         imgURL: inputimagenURL.value.trim(),
-
         idArtista: selectArtistas.value,
       };
-      arrayAux = arrayAux.filter((objeto) => objeto.id != albumes[i].id);
-      arrayAux.push(objetoMod);
-      console.log(arrayAux);
-      localStorage.setItem(`albumesKey`, JSON.stringify(arrayAux));
-      window.location.reload();
+
+      if (
+        inputNombre.value.trim() != "" &&
+        inputimagenURL.value.trim() != "" &&
+        selectArtistas.value != ""
+      ) {
+        if (
+          !/^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/.test(
+            agregarImagenAlbum.value
+          )
+        ) {
+          alert("Url imagen album invalida");
+        } else {
+          arrayAux = arrayAux.filter((objeto) => objeto.id != albumes[i].id);
+          arrayAux.push(objetoMod);
+          localStorage.setItem(`albumesKey`, JSON.stringify(arrayAux));
+          window.location.reload();
+        }
+      } else if (
+        inputNombre.value.trim() == "" ||
+        inputimagenURL.value.trim() == "" ||
+        selectArtistas.value == ""
+      ) {
+        alert("Cargue todos los campos");
+      }
     });
   }
 };
